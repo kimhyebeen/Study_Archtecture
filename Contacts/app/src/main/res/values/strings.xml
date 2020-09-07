@@ -4,4 +4,8 @@
     <string name="initial">E</string>
     <string name="name">Emma</string>
     <string name="number">999-888-777</string>
+
+    <string name="name_text">Name</string>
+    <string name="number_text">Number</string>
+    <string name="btn2">Done</string>
 </resources>
