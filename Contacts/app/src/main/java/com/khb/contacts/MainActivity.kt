@@ -1,6 +1,7 @@
 package com.khb.contacts
 
 import android.content.DialogInterface
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
@@ -18,11 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val contactAdapter = ContactAdapter({ contact ->
-            // put extras of contact info & start AddActivity
-        }, { contact ->
-            deleteDialog(contact)
-        })
+        val contactAdapter = ContactAdapter(
+            { contact -> updateDialog(contact) },
+            { contact -> deleteDialog(contact) }
+        )
 
         contactRecyclerView.apply {
             adapter = contactAdapter
@@ -40,6 +40,21 @@ class MainActivity : AppCompatActivity() {
             // update UI
             contactAdapter.setContacts(it)
         })
+
+        addButton.setOnClickListener {
+            Intent(this, AddActivity::class.java).let {
+                startActivity(it)
+            }
+        }
+    }
+
+    private fun updateDialog(contact: ContactEntity) {
+        Intent(this, AddActivity::class.java).let {
+            it.putExtra(AddActivity.EXTRA_CONTACT_NAME, contact.name)
+            it.putExtra(AddActivity.EXTRA_CONTACT_NUMBER, contact.number)
+            it.putExtra(AddActivity.EXTRA_CONTACT_ID, contact.id)
+            startActivity(it)
+        }
     }
 
     private fun deleteDialog(contact: ContactEntity) {
