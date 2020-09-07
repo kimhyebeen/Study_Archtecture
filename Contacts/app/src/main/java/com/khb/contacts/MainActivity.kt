@@ -1,10 +1,15 @@
 package com.khb.contacts
 
+import android.content.DialogInterface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.khb.contacts.adapter.ContactAdapter
 import com.khb.contacts.database.ContactEntity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var contactViewModel: ContactViewModel
@@ -12,6 +17,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val contactAdapter = ContactAdapter({ contact ->
+            // put extras of contact info & start AddActivity
+        }, { contact ->
+            deleteDialog(contact)
+        })
+
+        contactRecyclerView.apply {
+            adapter = contactAdapter
+            layoutManager = LinearLayoutManager(applicationContext)
+            setHasFixedSize(true)
+        }
 
         /**
          * 뷰모델 객체는 직접적으로 초기화 해주는 것이 아니라, 안드로이드 시스템을 통해 생성해준다.
@@ -21,6 +38,15 @@ class MainActivity : AppCompatActivity() {
         contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
         contactViewModel.getAll().observe(this, Observer<List<ContactEntity>> {
             // update UI
+            contactAdapter.setContacts(it)
         })
+    }
+
+    private fun deleteDialog(contact: ContactEntity) {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage("Delete selected contact?")
+            .setNegativeButton("NO") { _, _ -> }
+            .setPositiveButton("YES") { _, _ -> contactViewModel.delete(contact) }
+        builder.show()
     }
 }
