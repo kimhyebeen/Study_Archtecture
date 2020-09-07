@@ -1,4 +1,4 @@
-package com.khb.contacts
+package com.khb.contacts.database
 
 import android.content.Context
 import androidx.room.Room

@@ -1,4 +1,4 @@
-package com.khb.contacts
+package com.khb.contacts.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

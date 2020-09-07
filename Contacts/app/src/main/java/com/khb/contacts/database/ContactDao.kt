@@ -1,4 +1,4 @@
-package com.khb.contacts
+package com.khb.contacts.database
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
