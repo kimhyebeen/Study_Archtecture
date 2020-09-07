@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Contacts</string>
+    <string name="btn1">Add Contact</string>
+    <string name="initial">E</string>
+    <string name="name">Emma</string>
+    <string name="number">999-888-777</string>
 </resources>
