@@ -8,4 +8,4 @@ MVVM 패턴을 사용해보기 위한 토이 프로젝트
 
 ## 1. DataBinding을 사용하지 않은 MVVM 패턴 예제 : Contacts01
 * 연락처목록 만들기 애플리케이션
-<img src="./diagram01.png" width=300 />
+<img src="./diagram01.png" width=500 />
