@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
          * 따라서 ViewModelProviders를 이용해 get 해준다.
          */
         contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
-        contactViewModel.getAll().observe(this, {
+        contactViewModel.getAll().observe(this, Observer<List<ContactEntity>> {
             // update UI
             contactAdapter.setContacts(it)
         })
