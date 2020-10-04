@@ -2,6 +2,12 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android" >
 
+    <data>
+        <variable
+            name="contact"
+            type="com.khb.contacts.Contact" />
+    </data>
+
     <androidx.cardview.widget.CardView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -20,7 +26,7 @@
                 android:background="@android:color/darker_gray"
                 android:gravity="center"
                 android:padding="4dp"
-                android:text="@string/initial"
+                android:text="@{contact.initial}"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +37,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/name"
+                android:text="@{contact.name}"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toEndOf="@+id/initialTextView"
@@ -42,7 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/number"
+                android:text="@{contact.number}"
                 app:layout_constraintBottom_toBottomOf="@+id/initialTextView"
                 app:layout_constraintStart_toEndOf="@+id/initialTextView" />
 
