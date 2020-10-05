@@ -1,54 +1,40 @@
 package com.khb.contacts.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.khb.contacts.R
 import com.khb.contacts.database.ContactEntity
-import kotlinx.android.synthetic.main.item_contact.view.*
+import com.khb.contacts.databinding.ItemContactBinding
 
 class ContactAdapter(
     val contactItemClick: (ContactEntity) -> Unit,
-    val contactItemLongClick: (ContactEntity) -> Unit
+    val contactItemLongClick: (ContactEntity) -> Unit,
+    private var items: List<ContactEntity>
 ): RecyclerView.Adapter<ContactAdapter.ItemViewHolder>() {
-    private var contacts: List<ContactEntity> = listOf()
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder =
+        ItemViewHolder(
+            ItemContactBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        )
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false)
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) = holder.onBind(items[position])
 
-        return ItemViewHolder(view)
-    }
+    override fun getItemCount(): Int = items.size
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
-        holder.onBind(contacts[position])
-    }
-
-    override fun getItemCount(): Int {
-        return contacts.size
-    }
-
-    fun setContacts(contacts: List<ContactEntity>) {
-        this.contacts = contacts
+    fun setContents(data: List<ContactEntity>) {
+        items = data
         notifyDataSetChanged()
     }
 
-    inner class ItemViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val initial = itemView.initialTextView
-        private val name = itemView.nameTextView
-        private val number = itemView.numberTextView
+    inner class ItemViewHolder(
+        private var itemBinding: ItemContactBinding
+    ): RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun onBind(contact: ContactEntity) {
-            this.initial.text = contact.initial.toString()
-            this.name.text = contact.name
-            this.number.text = contact.number
+        fun onBind(item: ContactEntity) {
+            itemBinding.contact = item
 
-            itemView.setOnClickListener {
-                contactItemClick(contact)
-            }
-
+            itemView.setOnClickListener { contactItemClick(item) }
             itemView.setOnLongClickListener {
-                contactItemLongClick(contact)
+                contactItemLongClick(item)
                 true
             }
         }
