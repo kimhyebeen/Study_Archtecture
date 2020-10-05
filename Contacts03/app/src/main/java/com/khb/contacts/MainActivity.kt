@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         )
         /**
          * hasFixedSize를 true로 해주지 않으면,
-         * 항목의 크기가 변경되어 비용이 많이 드는 작업을 하는지 확인한다.
-         * 이런 불필요한 과정을 피하기 위해서 true로 해준다.
+         * 항목의 크기가 변경되어 비용이 많이 드는 작업을 하는지 일일이 확인합니다.
+         * 이런 불필요한 과정을 피하기 위해서 true로 해줍니다.
          */
         binding.contactRecyclerView.apply {
             adapter = contactAdapter
