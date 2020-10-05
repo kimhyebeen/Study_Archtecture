@@ -12,6 +12,7 @@ MVVM 패턴을 사용해보기 위한 토이 프로젝트
 <img src="./diagram01.png" width=500 />
 
 ## 2. DataBinding을 사용한 MVVM 패턴 예제 : Contacts03
+* 블로그 정리 : [RecyclerView에 DataBinding 적용하기](https://beenii.tistory.com/103)
 * 연락처 목록 만들기 애플리케이션
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
