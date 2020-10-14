@@ -16,3 +16,5 @@ MVVM 패턴을 사용해보기 위한 토이 프로젝트
 * 연락처 목록 만들기 애플리케이션
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
+
+## 3. Rx를 사용한 MVVM 패턴 예제 (to do) : Contacts04
