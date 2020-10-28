@@ -7,11 +7,13 @@ MVVM 패턴을 사용해보기 위한 토이 프로젝트
 * [AndroidKotlin MVVM & AAC 연습 예제](https://blog.yena.io/studynote/2019/03/27/Android-MVVM-AAC-2.html)
 * [유튜브|RecyclerView and DataBinding](https://www.youtube.com/watch?v=Xklim5RGHz8)
 
+* [MVP+Kotlin](https://medium.com/@dlgksah/mvp-kotlin-example-2de93add4c82)
+
 ## 1. MVVM 패턴 예제 : Contacts01
 * LiveData 사용
 * CoRoutine 사용
 * 연락처목록 만들기 애플리케이션
-<img src="./diagram01.png" width=500 />
+<img src="./diagram01.png" width=400 />
 
 ## 2. MVVM 패턴 예제 : Contracts03
 * DataBinding 사용
