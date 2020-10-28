@@ -1,6 +1,5 @@
-package com.khb.contacts
+package com.khb.contacts.activity
 
-import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,6 +7,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.khb.contacts.ContactViewModel
+import com.khb.contacts.R
 import com.khb.contacts.adapter.ContactAdapter
 import com.khb.contacts.database.ContactEntity
 import kotlinx.android.synthetic.main.activity_main.*

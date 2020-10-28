@@ -1,9 +1,11 @@
-package com.khb.contacts
+package com.khb.contacts.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProviders
+import com.khb.contacts.ContactViewModel
+import com.khb.contacts.R
 import com.khb.contacts.database.ContactEntity
 import kotlinx.android.synthetic.main.activity_add.*
 
@@ -18,7 +20,9 @@ class AddActivity : AppCompatActivity() {
         contactViewModel = ViewModelProviders.of(this).get(ContactViewModel::class.java)
 
         intent?.let {
-            if (it.hasExtra(EXTRA_CONTACT_NAME) && it.hasExtra(EXTRA_CONTACT_NUMBER) && it.hasExtra(EXTRA_CONTACT_ID)) {
+            if (it.hasExtra(EXTRA_CONTACT_NAME) && it.hasExtra(EXTRA_CONTACT_NUMBER) && it.hasExtra(
+                    EXTRA_CONTACT_ID
+                )) {
                 nameEditText.setText(it.getStringExtra(EXTRA_CONTACT_NAME))
                 numberEditText.setText(it.getStringExtra(EXTRA_CONTACT_NUMBER))
                 id = it.getLongExtra(EXTRA_CONTACT_ID, -1)
