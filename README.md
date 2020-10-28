@@ -1,5 +1,5 @@
-# toypjt_MVVM
-MVVM 패턴을 사용해보기 위한 토이 프로젝트
+# Study_Archtecture
+다양한 기술을 활용하면서 MVVM 패턴과 MVP 패턴을 활용? 공부? 연습? 해보기 위한 레포지토리.
 
 ## 참고 url
 * [AAC를 활용한 MVVM 적용 | 강남언니](https://blog.gangnamunni.com/post/aac_mvvm/)
@@ -25,3 +25,5 @@ MVVM 패턴을 사용해보기 위한 토이 프로젝트
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
 
 ## 3. MVP 패턴 예제 : DogList01
+* 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
+* 각 Base 클래스들을 분리하여 추상화 과정 진행
