@@ -1,19 +1,18 @@
-package com.khb.contacts
+package com.khb.contacts.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AlertDialog
-import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.khb.contacts.ContactViewModel
+import com.khb.contacts.R
 import com.khb.contacts.adapter.ContactAdapter
 import com.khb.contacts.database.ContactEntity
 import com.khb.contacts.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var contactViewModel: ContactViewModel

@@ -8,14 +8,10 @@ import com.khb.contacts.database.ContactEntity
 import io.reactivex.Completable
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
 
 class ContactRepository(application: Application) {
     private val contactDatabase = ContactDatabase.getInstance(application)!!
     private val contactDao = contactDatabase.contactDao()
-//    private val contacts = contactDao.getAll()
     private lateinit var contacts: LiveData<List<ContactEntity>>
 
     @SuppressLint("CheckResult")
@@ -30,7 +26,6 @@ class ContactRepository(application: Application) {
 
     @SuppressLint("CheckResult")
     fun insert(contact: ContactEntity) {
-//        GlobalScope.launch(Dispatchers.IO) { contactDao.insert(contact) }
         Completable.complete()
             .subscribeOn(Schedulers.io())
             .subscribe(
@@ -41,7 +36,6 @@ class ContactRepository(application: Application) {
 
     @SuppressLint("CheckResult")
     fun delete(contact: ContactEntity) {
-//        GlobalScope.launch(Dispatchers.IO) { contactDao.delete(contact) }
         Completable.complete()
             .subscribeOn(Schedulers.io())
             .subscribe(
