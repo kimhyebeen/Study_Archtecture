@@ -26,3 +26,16 @@
 ## 3. MVP 패턴 예제 : DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
 * 각 Base 클래스들을 분리하여 추상화 과정 진행
+
+```
+(1) 사용자가 버튼을 누른다.
+    -> View에서 클릭 이벤트가 발생
+    -> View에서 발생한 클릭 이벤트를 Presenter로 전달
+(2) Dog List를 가져온다. (DB에서든 API에서든. 여기서는 Handler로 흉내만 낼 거임)
+    -> Presenter가 Model에게 데이터를 요청
+    -> Model이 Presenter에 요청한 데이터를 전달
+    -> Presenter가 받은 데이터를 가공
+    -> 가공한 데이터를 View에 전달
+(3) Dog List의 이름과 나이를 보이도록 한다.
+    -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
+```
