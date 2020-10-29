@@ -12,7 +12,7 @@
 * LiveData 사용
 * CoRoutine 사용
 * 연락처목록 만들기 애플리케이션
-<img src="./diagram01.png" width=400 />
+<img src="./Contacts01-diagram.png" width=500 />
 
 ## 2. MVVM 패턴 예제 : Contracts03
 * DataBinding 사용
@@ -23,9 +23,12 @@
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
 
+---
+
 ## 3. MVP 패턴 예제 : DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
 * 각 Base 클래스들을 분리하여 추상화 과정 진행
+<img src="./DogList01-diagram.png" width=500 />
 
 ```
 (1) 사용자가 버튼을 누른다.
