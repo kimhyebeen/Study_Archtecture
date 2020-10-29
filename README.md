@@ -28,7 +28,7 @@
 ## 3. MVP 패턴 예제 : DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
 * 각 Base 클래스들을 분리하여 추상화 과정 진행
-<img src="./DogList01-diagram.png" width=500 />
+<img src="./DogList01-diagram.png" width=800 />
 
 ```
 (1) 사용자가 버튼을 누른다.
