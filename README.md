@@ -42,3 +42,7 @@
 (3) Dog List의 이름과 나이를 보이도록 한다.
     -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
 ```
+
+## 4. MVP 패턴 예제 : WeatherAPI
+* 날씨 api를 그대로 가져와보기
+* MVP 패턴 + Retrofit + CoRoutine
