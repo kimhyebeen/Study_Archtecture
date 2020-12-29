@@ -15,6 +15,7 @@
 		EE614126259B9D950021CDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE614124259B9D950021CDE3 /* LaunchScreen.storyboard */; };
 		EE614131259B9D950021CDE3 /* Dictionary01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614130259B9D950021CDE3 /* Dictionary01Tests.swift */; };
 		EE61413C259B9D950021CDE3 /* Dictionary01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61413B259B9D950021CDE3 /* Dictionary01UITests.swift */; };
+		EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		EE614137259B9D950021CDE3 /* Dictionary01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dictionary01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE61413B259B9D950021CDE3 /* Dictionary01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary01UITests.swift; sourceTree = "<group>"; };
 		EE61413D259B9D950021CDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerComponents.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		EE614118259B9D920021CDE3 /* Dictionary01 */ = {
 			isa = PBXGroup;
 			children = (
+				EE61414C259BA5930021CDE3 /* ViewController */,
 				EE614119259B9D920021CDE3 /* AppDelegate.swift */,
 				EE61411B259B9D920021CDE3 /* SceneDelegate.swift */,
-				EE61411D259B9D920021CDE3 /* ViewController.swift */,
 				EE61411F259B9D920021CDE3 /* Main.storyboard */,
 				EE614122259B9D950021CDE3 /* Assets.xcassets */,
 				EE614124259B9D950021CDE3 /* LaunchScreen.storyboard */,
@@ -126,6 +128,15 @@
 				EE61413D259B9D950021CDE3 /* Info.plist */,
 			);
 			path = Dictionary01UITests;
+			sourceTree = "<group>";
+		};
+		EE61414C259BA5930021CDE3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EE61411D259B9D920021CDE3 /* ViewController.swift */,
+				EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				EE61411E259B9D920021CDE3 /* ViewController.swift in Sources */,
 				EE61411A259B9D920021CDE3 /* AppDelegate.swift in Sources */,
+				EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */,
 				EE61411C259B9D920021CDE3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
