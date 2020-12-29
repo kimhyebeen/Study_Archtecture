@@ -8,13 +8,13 @@
 * [유튜브|RecyclerView and DataBinding](https://www.youtube.com/watch?v=Xklim5RGHz8)
 * [MVP+Kotlin](https://medium.com/@dlgksah/mvp-kotlin-example-2de93add4c82)
 
-## 1. MVVM 패턴 예제 : Contacts01
+## (AOS) MVVM 패턴 예제 : Contacts01
 * LiveData 사용
 * CoRoutine 사용
 * 연락처목록 만들기 애플리케이션
 <img src="./Contacts01-diagram.png" width=500 />
 
-## 2. MVVM 패턴 예제 : Contracts03
+## (AOS) MVVM 패턴 예제 : Contracts03
 * DataBinding 사용
 * LiveData 사용
 * CoRoutine 대신 RxKotlin 사용
@@ -25,7 +25,7 @@
 
 ---
 
-## 3. MVP 패턴 예제 : DogList01
+## (AOS) MVP 패턴 예제 : DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
 * 각 Base 클래스들을 분리하여 추상화 과정 진행
 <img src="./DogList01-diagram.png" width=800 />
@@ -42,7 +42,3 @@
 (3) Dog List의 이름과 나이를 보이도록 한다.
     -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
 ```
-
-## 4. MVP 패턴 예제 : WeatherAPI
-* 날씨 api를 그대로 가져와보기
-* MVP 패턴 + Retrofit + CoRoutine
