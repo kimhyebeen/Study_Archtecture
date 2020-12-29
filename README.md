@@ -14,6 +14,7 @@
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
 * RxSwift, SwiftUI, Combine 없이 기본 코드로만 구현하는 MVVM 패턴
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
+* Alamofire 사용
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
 * LiveData 사용

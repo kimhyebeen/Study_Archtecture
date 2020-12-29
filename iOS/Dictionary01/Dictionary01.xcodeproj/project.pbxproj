@@ -101,7 +101,9 @@
 		EE614118259B9D920021CDE3 /* Dictionary01 */ = {
 			isa = PBXGroup;
 			children = (
-				EE61414C259BA5930021CDE3 /* ViewController */,
+				EE61416F259BA78B0021CDE3 /* Model */,
+				EE61416E259BA7820021CDE3 /* ViewModel */,
+				EE61414C259BA5930021CDE3 /* View */,
 				EE614119259B9D920021CDE3 /* AppDelegate.swift */,
 				EE61411B259B9D920021CDE3 /* SceneDelegate.swift */,
 				EE61411F259B9D920021CDE3 /* Main.storyboard */,
@@ -130,13 +132,27 @@
 			path = Dictionary01UITests;
 			sourceTree = "<group>";
 		};
-		EE61414C259BA5930021CDE3 /* ViewController */ = {
+		EE61414C259BA5930021CDE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				EE61411D259B9D920021CDE3 /* ViewController.swift */,
 				EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */,
 			);
-			path = ViewController;
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE61416E259BA7820021CDE3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE61416F259BA78B0021CDE3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
