@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE15B2F1259C37AC00D544D3 /* SearchTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B2F0259C37AC00D544D3 /* SearchTableCell.swift */; };
 		EE61411A259B9D920021CDE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614119259B9D920021CDE3 /* AppDelegate.swift */; };
 		EE61411C259B9D920021CDE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61411B259B9D920021CDE3 /* SceneDelegate.swift */; };
 		EE61411E259B9D920021CDE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61411D259B9D920021CDE3 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE15B2F0259C37AC00D544D3 /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
 		EE614116259B9D920021CDE3 /* Dictionary01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE614119259B9D920021CDE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE61411B259B9D920021CDE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE15B2EF259C379500D544D3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EE15B2F0259C37AC00D544D3 /* SearchTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EE61410D259B9D920021CDE3 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +145,7 @@
 		EE61414C259BA5930021CDE3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE15B2EF259C379500D544D3 /* Cells */,
 				EE61411D259B9D920021CDE3 /* ViewController.swift */,
 				EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */,
 			);
@@ -287,6 +298,7 @@
 			files = (
 				EE61411E259B9D920021CDE3 /* ViewController.swift in Sources */,
 				EE61411A259B9D920021CDE3 /* AppDelegate.swift in Sources */,
+				EE15B2F1259C37AC00D544D3 /* SearchTableCell.swift in Sources */,
 				EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */,
 				EE61411C259B9D920021CDE3 /* SceneDelegate.swift in Sources */,
 			);
