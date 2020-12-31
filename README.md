@@ -3,6 +3,7 @@
 
 ## 🍎 참고 url (iOS)
 * [간단한 예제로 살펴보는 iOS Design/Architecture Pattern: MVVM](https://lena-chamna.netlify.app/post/ios_design_pattern_mvvm/#%EA%B0%84%EB%8B%A8%ED%95%9C-MVVM-%EC%98%88%EC%A0%9C)
+* [Data Binding in MVVM on iOS](https://medium.com/flawless-app-stories/data-binding-in-mvvm-on-ios-714eb15e3913)
 
 ## 💫 참고 url (AOS)
 * [AAC를 활용한 MVVM 적용 | 강남언니](https://blog.gangnamunni.com/post/aac_mvvm/)
@@ -12,9 +13,30 @@
 * [MVP+Kotlin](https://medium.com/@dlgksah/mvp-kotlin-example-2de93add4c82)
 
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
-* RxSwift, SwiftUI, Combine 없이 기본 코드로만 구현하는 MVVM 패턴
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
 * Alamofire 사용
+* 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 사용하였다.
+```swift
+final class Observable<T> {
+  typealias Listener = (T) -> Void
+
+  var listener: Listener?
+  var value: T {
+    didSet {
+      listener?(value)
+    }
+  }
+
+  init(_ value: T) {
+    self.value = value
+  }
+
+  func bind(listener: Listener?) {
+    self.listener = listener
+    listener?(value)
+  }
+}
+```
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
 * LiveData 사용
