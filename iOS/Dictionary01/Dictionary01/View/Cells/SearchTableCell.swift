@@ -12,13 +12,20 @@ class SearchTableCell: UITableViewCell {
     var titleLabel: UILabel = UILabel()
     var contentLabel: UILabel = UILabel()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         setupCellView()
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     private func setupCellView() {
+        self.contentView.addSubview(self.titleLabel)
+        self.contentView.addSubview(self.contentLabel)
+        
         self.titleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.contentLabel.translatesAutoresizingMaskIntoConstraints = false
         
@@ -35,6 +42,7 @@ class SearchTableCell: UITableViewCell {
     
     private func setupContentLabel() {
         self.contentLabel.numberOfLines = 0
+        self.contentLabel.textColor = UIColor.systemGray
         
         self.contentLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 8).isActive = true
         self.contentLabel.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10).isActive = true
@@ -49,7 +57,7 @@ class SearchTableCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
 
