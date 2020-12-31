@@ -26,6 +26,8 @@ extension ViewController {
         
         self.searchButton.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
         self.searchButton.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -35).isActive = true
+        
+        self.searchButton.addTarget(self, action: #selector(clickSearchButton(_:)), for: .touchUpInside)
     }
     
     func setupTableView() {
@@ -36,5 +38,9 @@ extension ViewController {
         self.tableView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         self.tableView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
         self.tableView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+    }
+    
+    @objc func clickSearchButton(_ sender: UIButton) {
+        self.searchVM.requestSearch(word: self.searchTextField.text)
     }
 }
