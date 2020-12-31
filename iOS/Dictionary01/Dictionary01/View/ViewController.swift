@@ -12,11 +12,23 @@ class ViewController: UIViewController {
     var searchTextField: UITextField = UITextField()
     var searchButton: UIButton = UIButton()
     var tableView: UITableView = UITableView()
+    
+    var searchVM = SearchViewModel()
+    var items: [DictionaryModel] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupView()
+        
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.register(SearchTableCell.self, forCellReuseIdentifier: SearchTableCell.identifier)
+        
+        searchVM.dictionaryItems.bind { [weak self] model in
+            self?.items = model ?? []
+            self?.tableView.reloadData()
+        }
     }
 
     private func setupView() {
