@@ -14,9 +14,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let emptyCell = SearchTableCell()
+        emptyCell.titleLabel.text = "(정보 없음)"
+        
         guard let cell: SearchTableCell = tableView.dequeueReusableCell(withIdentifier: SearchTableCell.identifier, for: indexPath) as? SearchTableCell else {
             
-            return SearchTableCell()
+            return emptyCell
         }
         let item = self.items[indexPath.row]
         cell.setupViewInformation(title: item.title, contents: item.description)
