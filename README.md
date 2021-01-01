@@ -38,6 +38,8 @@ final class Observable<T> {
 }
 ```
 
+<img src="./Dictionary01-screen.png" width=800>
+
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
 * LiveData 사용
 * CoRoutine 사용
