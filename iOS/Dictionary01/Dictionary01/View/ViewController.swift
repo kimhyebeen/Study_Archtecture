@@ -28,6 +28,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.tableView.register(SearchTableCell.self, forCellReuseIdentifier: SearchTableCell.identifier)
+        self.tableView.register(MoreInfoTableCell.self, forCellReuseIdentifier: MoreInfoTableCell.identifier)
         
         searchVM.dictionaryItems.bind { [weak self] model in
             self?.tableView.reloadData()
