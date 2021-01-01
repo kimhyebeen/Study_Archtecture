@@ -72,3 +72,29 @@ final class Observable<T> {
 (3) Dog List의 이름과 나이를 보이도록 한다.
     -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
 ```
+
+## Others
+* SwiftUI로 UI미리보기
+```swift
+#if DEBUG
+import SwiftUI
+struct ViewControllerRepresentabletable: UIViewControllerRepresentable {
+    // update
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+
+    }
+
+    // make UI
+    @available(iOS 13.0, *)
+    func makeUIViewController(context: Context) -> some UIViewController {
+        ViewController()
+    }
+}
+
+struct ViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewControllerRepresentabletable()
+    }
+}
+#endif
+```
