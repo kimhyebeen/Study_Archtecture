@@ -47,13 +47,12 @@ class SearchViewModel {
             let dictionaryResponse: DictionaryResponse = try JSONDecoder().decode(DictionaryResponse.self, from: data)
             
             if isSameWord(newWord: word) {
-                var newItems = self._dictionaryItems.value
-                newItems.append(contentsOf: dictionaryResponse.items)
-                self._dictionaryItems.value = newItems
+                self._dictionaryItems.value += dictionaryResponse.items
             } else {
                 self._dictionaryItems.value = dictionaryResponse.items
             }
             
+            self.preQuery = word
             self.nextStart = dictionaryResponse.start + 10
         } catch {
             print(error.localizedDescription)

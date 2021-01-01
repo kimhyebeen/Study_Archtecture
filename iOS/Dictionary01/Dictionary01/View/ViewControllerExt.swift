@@ -10,7 +10,7 @@ import UIKit
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items.count + 1
+        return self.items.count == 0 ? 0 : self.items.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,11 +42,15 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell: MoreInfoTableCell = tableView.dequeueReusableCell(withIdentifier: MoreInfoTableCell.identifier, for: indexPath) as? MoreInfoTableCell else {
             return emptyCell
         }
+        cell.frame.size = CGSize(width: self.view.frame.width - 60, height: 120)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == self.items.count {
+            self.searchVM.requestSearch(word: self.searchTextField.text)
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

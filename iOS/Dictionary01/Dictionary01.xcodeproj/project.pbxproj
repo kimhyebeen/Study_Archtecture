@@ -23,7 +23,6 @@
 		EE61413C259B9D950021CDE3 /* Dictionary01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61413B259B9D950021CDE3 /* Dictionary01UITests.swift */; };
 		EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */; };
 		EEFEACC8259F4C4B00A6ADE2 /* MoreInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEACC7259F4C4B00A6ADE2 /* MoreInfoTableCell.swift */; };
-		EEFEACCD259F51A600A6ADE2 /* MoreInfoTableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEACCC259F51A600A6ADE2 /* MoreInfoTableCellDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +67,6 @@
 		EE61413D259B9D950021CDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerComponents.swift; sourceTree = "<group>"; };
 		EEFEACC7259F4C4B00A6ADE2 /* MoreInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoTableCell.swift; sourceTree = "<group>"; };
-		EEFEACCC259F51A600A6ADE2 /* MoreInfoTableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoTableCellDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +117,6 @@
 			children = (
 				EE15B2F0259C37AC00D544D3 /* SearchTableCell.swift */,
 				EEFEACC7259F4C4B00A6ADE2 /* MoreInfoTableCell.swift */,
-				EEFEACCC259F51A600A6ADE2 /* MoreInfoTableCellDelegate.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -401,7 +398,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEFEACCD259F51A600A6ADE2 /* MoreInfoTableCellDelegate.swift in Sources */,
 				EE15B303259C445300D544D3 /* Observable.swift in Sources */,
 				EEFEACC8259F4C4B00A6ADE2 /* MoreInfoTableCell.swift in Sources */,
 				EE15B308259C48BB00D544D3 /* ViewControllerExt.swift in Sources */,

@@ -9,7 +9,7 @@ import UIKit
 
 class MoreInfoTableCell: UITableViewCell {
     static let identifier = "MoreInfoTableCell"
-    private let moreInfoButton: UIButton = UIButton()
+    private let moreInfoLabel: UILabel = UILabel()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,21 +22,19 @@ class MoreInfoTableCell: UITableViewCell {
     }
     
     private func setupCellView() {
-        self.contentView.addSubview(self.moreInfoButton)
+        self.contentView.addSubview(self.moreInfoLabel)
         
-        self.moreInfoButton.translatesAutoresizingMaskIntoConstraints = false
+        self.moreInfoLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        setupMoreInfoButton()
+        setupMoreInfoLabel()
     }
     
-    private func setupMoreInfoButton() {
-        self.moreInfoButton.setTitle("더보기", for: .normal)
-        self.moreInfoButton.backgroundColor = UIColor.lightGray
+    private func setupMoreInfoLabel() {
+        self.moreInfoLabel.text = "더보기"
+        self.moreInfoLabel.textColor = UIColor.systemBlue
         
-        self.moreInfoButton.topAnchor.constraint(equalTo: self.contentView.topAnchor).isActive = true
-        self.moreInfoButton.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
-        self.moreInfoButton.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
-        self.moreInfoButton.frame.size = CGSize(width: self.contentView.frame.width, height: 100)
+        self.moreInfoLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor).isActive = true
+        self.moreInfoLabel.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
