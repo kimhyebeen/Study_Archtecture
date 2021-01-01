@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     var searchVM = SearchViewModel()
     var items: [DictionaryModel] {
         get {
-            return searchVM.dictionaryItems.value ?? []
+            return searchVM.dictionaryItems.value
         }
     }
 
