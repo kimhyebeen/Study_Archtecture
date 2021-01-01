@@ -9,7 +9,7 @@
 * Alamofire 사용
 * 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 사용하였다.
 <details>
-<summary>Observable<T> 객체</summary>
+<summary>Observable<T> 객체 (클릭하면 펼쳐집니다)</summary>
 <div markdown="1">
 
 ```swift
