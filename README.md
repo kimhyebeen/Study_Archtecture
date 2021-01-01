@@ -2,6 +2,7 @@
 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
 
 <br />
+<br />
 
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
@@ -40,6 +41,7 @@ final class Observable<T> {
 <img src="./Contacts01-diagram.png" width=500 />
 
 <br />
+<br />
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contracts03
 * DataBinding 사용
@@ -50,6 +52,7 @@ final class Observable<T> {
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
 
+<br />
 <br />
 
 ## 💫 (AOS) MVP 패턴 예제 : DogList01
@@ -70,7 +73,11 @@ final class Observable<T> {
     -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
 ```
 
+<br />
+
 ---
+
+<br />
 
 ## Others
 * SwiftUI로 UI미리보기
@@ -97,7 +104,13 @@ struct ViewController_Previews: PreviewProvider {
 }
 #endif
 ```
+
+<br />
+
 ---
+
+<br />
+
 ## 🍎 참고 url (iOS)
 * [간단한 예제로 살펴보는 iOS Design/Architecture Pattern: MVVM](https://lena-chamna.netlify.app/post/ios_design_pattern_mvvm/#%EA%B0%84%EB%8B%A8%ED%95%9C-MVVM-%EC%98%88%EC%A0%9C)
 * [Data Binding in MVVM on iOS](https://medium.com/flawless-app-stories/data-binding-in-mvvm-on-ios-714eb15e3913)
