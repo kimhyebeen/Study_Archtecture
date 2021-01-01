@@ -9,8 +9,13 @@ import Foundation
 import Alamofire
 
 class SearchViewModel {
-    let baseUrl = "https://openapi.naver.com/v1/search/encyc.json"
-    var dictionaryItems: Observable<[DictionaryModel]?> = Observable(nil)
+    private let baseUrl = "https://openapi.naver.com/v1/search/encyc.json"
+    private var _dictionaryItems: Observable<[DictionaryModel]?> = Observable(nil)
+    var dictionaryItems: Observable<[DictionaryModel]?> {
+        get {
+            return _dictionaryItems
+        }
+    }
     
     func requestSearch(word: String?) {
         guard let searchWord: String = word, !(word?.isEmpty ?? true) else {
@@ -32,17 +37,13 @@ class SearchViewModel {
             }
     }
     
-    func getDictionaryModel(value: Any){
+    private func getDictionaryModel(value: Any){
         do {
             let data = try JSONSerialization.data(withJSONObject: value, options: .prettyPrinted)
             let dictionaryResponse: DictionaryResponse = try JSONDecoder().decode(DictionaryResponse.self, from: data)
-            self.dictionaryItems.value = dictionaryResponse.items
+            self._dictionaryItems.value = dictionaryResponse.items
         } catch {
             print(error.localizedDescription)
         }
-    }
-    
-    func setDictionaryItem(items: [DictionaryModel]) {
-        self.dictionaryItems.value = items
     }
 }

@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     var tableView: UITableView = UITableView()
     
     var searchVM = SearchViewModel()
-    var items: [DictionaryModel] = []
+    var items: [DictionaryModel] {
+        get {
+            return searchVM.dictionaryItems.value ?? []
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +30,6 @@ class ViewController: UIViewController {
         self.tableView.register(SearchTableCell.self, forCellReuseIdentifier: SearchTableCell.identifier)
         
         searchVM.dictionaryItems.bind { [weak self] model in
-            self?.items = model ?? []
             self?.tableView.reloadData()
         }
     }
@@ -40,29 +43,4 @@ class ViewController: UIViewController {
         setupSearchButton()
         setupTableView()
     }
-    
 }
-
-// 미리보기
-//#if DEBUG
-//import SwiftUI
-//struct ViewControllerRepresentabletable: UIViewControllerRepresentable {
-//    // update
-//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-//
-//    }
-//
-//    // make UI
-//    @available(iOS 13.0, *)
-//    func makeUIViewController(context: Context) -> some UIViewController {
-//        ViewController()
-//    }
-//}
-//
-//struct ViewController_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ViewControllerRepresentabletable()
-//    }
-//}
-//#endif
-
