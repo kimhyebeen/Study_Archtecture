@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var searchTotalCount: UILabel = UILabel()
     var searchTextField: UITextField = UITextField()
     var searchButton: UIButton = UIButton()
     var tableView: UITableView = UITableView()
@@ -32,15 +32,18 @@ class ViewController: UIViewController {
         
         searchVM.dictionaryItems.bind { [weak self] model in
             self?.tableView.reloadData()
+            self?.searchTotalCount.text = "\(model.count)개 검색됨."
         }
     }
 
     private func setupView() {
-        self.view.addSubview(self.searchTextField)
+        self.view.addSubview(searchTextField)
+        self.view.addSubview(searchTotalCount)
         self.view.addSubview(searchButton)
         self.view.addSubview(tableView)
         
         setupSearchTextField()
+        setupSearchTotalCountLabel()
         setupSearchButton()
         setupTableView()
     }
