@@ -37,8 +37,11 @@ final class Observable<T> {
 </div>
 </details>
 
+<br />
+
 <img src="./Dictionary01-screen.png" width=800>
 
+<br />
 <br />
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
