@@ -1,16 +1,7 @@
 # Study_Archtecture
 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
 
-## 🍎 참고 url (iOS)
-* [간단한 예제로 살펴보는 iOS Design/Architecture Pattern: MVVM](https://lena-chamna.netlify.app/post/ios_design_pattern_mvvm/#%EA%B0%84%EB%8B%A8%ED%95%9C-MVVM-%EC%98%88%EC%A0%9C)
-* [Data Binding in MVVM on iOS](https://medium.com/flawless-app-stories/data-binding-in-mvvm-on-ios-714eb15e3913)
-
-## 💫 참고 url (AOS)
-* [AAC를 활용한 MVVM 적용 | 강남언니](https://blog.gangnamunni.com/post/aac_mvvm/)
-* [안드로이드의 MVC, MVP, MVVM 종합 안내서](https://academy.realm.io/kr/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/)
-* [AndroidKotlin MVVM & AAC 연습 예제](https://blog.yena.io/studynote/2019/03/27/Android-MVVM-AAC-2.html)
-* [유튜브|RecyclerView and DataBinding](https://www.youtube.com/watch?v=Xklim5RGHz8)
-* [MVP+Kotlin](https://medium.com/@dlgksah/mvp-kotlin-example-2de93add4c82)
+<br />
 
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
@@ -40,11 +31,15 @@ final class Observable<T> {
 
 <img src="./Dictionary01-screen.png" width=800>
 
+<br />
+
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
 * LiveData 사용
 * CoRoutine 사용
 * 연락처목록 만들기 애플리케이션
 <img src="./Contacts01-diagram.png" width=500 />
+
+<br />
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contracts03
 * DataBinding 사용
@@ -55,7 +50,7 @@ final class Observable<T> {
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
 * 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
 
----
+<br />
 
 ## 💫 (AOS) MVP 패턴 예제 : DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
@@ -74,6 +69,8 @@ final class Observable<T> {
 (3) Dog List의 이름과 나이를 보이도록 한다.
     -> View가 Presenter에서 전달받은 데이터를 사용자에게 보인다.
 ```
+
+---
 
 ## Others
 * SwiftUI로 UI미리보기
@@ -100,3 +97,14 @@ struct ViewController_Previews: PreviewProvider {
 }
 #endif
 ```
+---
+## 🍎 참고 url (iOS)
+* [간단한 예제로 살펴보는 iOS Design/Architecture Pattern: MVVM](https://lena-chamna.netlify.app/post/ios_design_pattern_mvvm/#%EA%B0%84%EB%8B%A8%ED%95%9C-MVVM-%EC%98%88%EC%A0%9C)
+* [Data Binding in MVVM on iOS](https://medium.com/flawless-app-stories/data-binding-in-mvvm-on-ios-714eb15e3913)
+
+## 💫 참고 url (AOS)
+* [AAC를 활용한 MVVM 적용 | 강남언니](https://blog.gangnamunni.com/post/aac_mvvm/)
+* [안드로이드의 MVC, MVP, MVVM 종합 안내서](https://academy.realm.io/kr/posts/eric-maxwell-mvc-mvp-and-mvvm-on-android/)
+* [AndroidKotlin MVVM & AAC 연습 예제](https://blog.yena.io/studynote/2019/03/27/Android-MVVM-AAC-2.html)
+* [유튜브|RecyclerView and DataBinding](https://www.youtube.com/watch?v=Xklim5RGHz8)
+* [MVP+Kotlin](https://medium.com/@dlgksah/mvp-kotlin-example-2de93add4c82)
