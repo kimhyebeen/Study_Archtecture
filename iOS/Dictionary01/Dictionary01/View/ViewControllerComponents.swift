@@ -22,7 +22,7 @@ extension ViewController {
         self.searchTotalCount.translatesAutoresizingMaskIntoConstraints = false
         self.searchTotalCount.text = "0개 검색됨"
         self.searchTotalCount.font = UIFont.systemFont(ofSize: 14)
-        self.searchTotalCount.textColor = UIColor.systemGray
+        self.searchTotalCount.textColor = UIColor.systemOrange
         
         self.searchTotalCount.topAnchor.constraint(equalTo: self.searchTextField.bottomAnchor, constant: 8).isActive = true
         self.searchTotalCount.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 35).isActive = true
