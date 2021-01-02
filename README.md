@@ -1,5 +1,5 @@
 # Study_Archtecture
-다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
+iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
 
 <br />
 <br />
