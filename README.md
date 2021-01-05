@@ -8,6 +8,8 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
 * RxSwift, Alamofire 사용
 
+<br />
+<br />
 
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
