@@ -8,7 +8,7 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 * 간단한 로그인 화면 구현하기
 * RxSwift, RxCocoa 사용
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
-<img src="./SignIn-screen.png" width= 500 />
+<img src="./SignIn-screen.png" width= 750 />
 
 <br />
 <br />
