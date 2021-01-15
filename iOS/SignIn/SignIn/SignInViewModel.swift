@@ -57,7 +57,7 @@ class SignInViewModel {
     func validatePassword(_ pw: String) -> Bool {
         if pw.isEmpty { return false }
         
-        let pwRegex = "(?=.*[A-Za-z])(?=.*[0-9]).{8, 16}"
+        let pwRegex = "^.{8,16}$"
         let pwText = NSPredicate(format:"SELF MATCHES %@", pwRegex)
         return pwText.evaluate(with: pw)
     }

@@ -79,7 +79,8 @@ class SignInRoundedRectangle: UIView {
     func setupSignInButton() {
         signInButton.setTitle("Sign In", for: .normal)
         signInButton.layer.cornerRadius = 22.5
-        signInButton.backgroundColor = UIColor(named: "ButtonColor")
+        signInButton.backgroundColor = .lightGray
+        signInButton.isEnabled = false
         self.addSubview(signInButton)
         
         signInButton.translatesAutoresizingMaskIntoConstraints = false
@@ -112,6 +113,12 @@ class SignInRoundedRectangle: UIView {
         signUpButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         signUpButton.bottomAnchor.constraint(greaterThanOrEqualTo: scrollView.bottomAnchor, constant: -50).isActive = true
+    }
+    
+    func setSignInButtonEnable(isEnable: Bool) {
+        signInButton.isEnabled = isEnable
+        if isEnable { signInButton.backgroundColor = UIColor(named: "ButtonColor") }
+        else { signInButton.backgroundColor = .lightGray }
     }
     
 }
