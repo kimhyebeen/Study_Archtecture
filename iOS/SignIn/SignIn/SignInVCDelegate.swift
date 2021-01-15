@@ -19,6 +19,8 @@ extension SignInVC: UIGestureRecognizerDelegate, UITextFieldDelegate {
             roundedRectangle.signInForm.setFocusDesignEmailTextField(isFocus: true)
         case roundedRectangle.signInForm.passwordTextField:
             roundedRectangle.signInForm.setFocusDesignPasswordTextField(isFocus: true)
+            roundedRectangle.scrollView.setContentOffset(CGPoint(x: 0, y: roundedRectangle.signInForm.passwordTextField.frame.maxY-70), animated: true)
+            
         default:
             print("text field should begin editing - default")
         }
@@ -31,6 +33,7 @@ extension SignInVC: UIGestureRecognizerDelegate, UITextFieldDelegate {
             roundedRectangle.signInForm.setFocusDesignEmailTextField(isFocus: false)
         case roundedRectangle.signInForm.passwordTextField:
             roundedRectangle.signInForm.setFocusDesignPasswordTextField(isFocus: false)
+            roundedRectangle.scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
         default:
             print("text field should end editing - default")
         }

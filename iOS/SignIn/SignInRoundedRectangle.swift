@@ -122,7 +122,6 @@ class SignInRoundedRectangle: UIView {
         self.addSubview(scrollView)
         contentsView.bounds.size = CGSize(width: scrollView.frame.width, height: 500)
         scrollView.contentSize = contentsView.bounds.size
-        print("content view: \(contentsView.bounds.size)")
         
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
