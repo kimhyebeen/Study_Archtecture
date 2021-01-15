@@ -125,6 +125,7 @@ extension SignInForm {
         passwordTextField.textColor = .darkGray
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
         passwordTextField.textContentType = .password
+        passwordTextField.isSecureTextEntry = true
         self.addSubview(passwordTextField)
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
