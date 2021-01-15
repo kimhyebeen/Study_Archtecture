@@ -153,5 +153,6 @@ extension SignInForm {
         passwordFailureLabel.translatesAutoresizingMaskIntoConstraints = false
         passwordFailureLabel.topAnchor.constraint(equalTo: passwordDivider.bottomAnchor, constant: 2).isActive = true
         passwordFailureLabel.trailingAnchor.constraint(equalTo: passwordDivider.trailingAnchor).isActive = true
+        passwordFailureLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
 }
