@@ -42,6 +42,14 @@ class SignInVC: UIViewController {
         vm.output.enableLogIn.subscribe(onNext: { [weak self] login in
             if login { self?.moveToMain() }
         }).disposed(by: disposeBag)
+        
+        vm.output.emailStatus.subscribe(onNext: { [weak self] status in
+            self?.roundedRectangle.signInForm.setEmailFailrueLabel(isCorrect: status)
+        }).disposed(by: disposeBag)
+        
+        vm.output.passwordStatus.subscribe(onNext: { [weak self] status in
+            self?.roundedRectangle.signInForm.setPasswordFailureLabel(isCorrect: status)
+        }).disposed(by: disposeBag)
     }
     
     func setupSignUpButton() {

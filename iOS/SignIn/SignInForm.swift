@@ -11,9 +11,11 @@ class SignInForm: UIView {
     private let emailLabel = UILabel()
     let emailTextField = UITextField()
     private let emailDivider = UIView()
+    private let emailFailureLabel = UILabel()
     private let passwordLabel = UILabel()
     let passwordTextField = UITextField()
     private let passwordDivider = UIView()
+    private let passwordFailureLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,6 +48,14 @@ class SignInForm: UIView {
             passwordDivider.backgroundColor = .systemGray
         }
     }
+    
+    func setEmailFailrueLabel(isCorrect: Bool) {
+        emailFailureLabel.isHidden = isCorrect
+    }
+    
+    func setPasswordFailureLabel(isCorrect: Bool) {
+        passwordFailureLabel.isHidden = isCorrect
+    }
 
 }
 
@@ -53,8 +63,10 @@ extension SignInForm {
     func setupView() {
         setupEmailLabel()
         setupEmailTextField()
+        setupEmailFailureLabel()
         setupPasswordLabel()
         setupPasswordTextField()
+        setupPasswordFailureLabel()
     }
     
     func setupEmailLabel() {
@@ -87,6 +99,18 @@ extension SignInForm {
         emailDivider.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    func setupEmailFailureLabel() {
+        emailFailureLabel.text = "이메일 형식이 올바르지 않습니다"
+        emailFailureLabel.font = UIFont.systemFont(ofSize: 12)
+        emailFailureLabel.textColor = .systemRed
+        emailFailureLabel.isHidden = true
+        self.addSubview(emailFailureLabel)
+        
+        emailFailureLabel.translatesAutoresizingMaskIntoConstraints = false
+        emailFailureLabel.topAnchor.constraint(equalTo: emailDivider.bottomAnchor, constant: 2).isActive = true
+        emailFailureLabel.trailingAnchor.constraint(equalTo: emailDivider.trailingAnchor).isActive = true
+    }
+    
     func setupPasswordLabel() {
         passwordLabel.text = "비밀번호"
         passwordLabel.textColor = .systemGray
@@ -100,6 +124,7 @@ extension SignInForm {
     func setupPasswordTextField() {
         passwordTextField.textColor = .darkGray
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
+        passwordTextField.textContentType = .password
         self.addSubview(passwordTextField)
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -115,5 +140,17 @@ extension SignInForm {
         passwordDivider.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor).isActive = true
         passwordDivider.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor).isActive = true
         passwordDivider.heightAnchor.constraint(equalToConstant: 1).isActive = true
+    }
+    
+    func setupPasswordFailureLabel() {
+        passwordFailureLabel.text = "8~16자리를 입력해주세요"
+        passwordFailureLabel.font = UIFont.systemFont(ofSize: 12)
+        passwordFailureLabel.textColor = .systemRed
+        passwordFailureLabel.isHidden = true
+        self.addSubview(passwordFailureLabel)
+        
+        passwordFailureLabel.translatesAutoresizingMaskIntoConstraints = false
+        passwordFailureLabel.topAnchor.constraint(equalTo: passwordDivider.bottomAnchor, constant: 2).isActive = true
+        passwordFailureLabel.trailingAnchor.constraint(equalTo: passwordDivider.trailingAnchor).isActive = true
     }
 }
