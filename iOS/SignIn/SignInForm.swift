@@ -124,11 +124,7 @@ extension SignInForm {
     func setupPasswordTextField() {
         passwordTextField.textColor = .darkGray
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
-<<<<<<< HEAD
         passwordTextField.textContentType = .password
-=======
-        passwordTextField.textContentType = .newPassword
->>>>>>> master
         self.addSubview(passwordTextField)
         
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
