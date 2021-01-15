@@ -10,6 +10,7 @@
 		EE1F279C25B136DE00DA2CE9 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F279B25B136DE00DA2CE9 /* SignInForm.swift */; };
 		EE1F27A125B13B8400DA2CE9 /* SignInRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27A025B13B8400DA2CE9 /* SignInRoundedRectangle.swift */; };
 		EE1F27A725B148C000DA2CE9 /* SignInVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27A625B148C000DA2CE9 /* SignInVCExtension.swift */; };
+		EE1F27B825B186E700DA2CE9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */; };
 		EE55A2FD25B0966500F7009C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A2FC25B0966500F7009C /* AppDelegate.swift */; };
 		EE55A2FF25B0966500F7009C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A2FE25B0966500F7009C /* SceneDelegate.swift */; };
 		EE55A30125B0966500F7009C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A30025B0966500F7009C /* SignInVC.swift */; };
@@ -41,6 +42,7 @@
 		EE1F279B25B136DE00DA2CE9 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInForm.swift; sourceTree = SOURCE_ROOT; };
 		EE1F27A025B13B8400DA2CE9 /* SignInRoundedRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRoundedRectangle.swift; sourceTree = SOURCE_ROOT; };
 		EE1F27A625B148C000DA2CE9 /* SignInVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVCExtension.swift; sourceTree = "<group>"; };
+		EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		EE55A2F925B0966500F7009C /* SignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE55A2FC25B0966500F7009C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE55A2FE25B0966500F7009C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				EE55A30525B0966700F7009C /* Assets.xcassets */,
 				EE55A30725B0966700F7009C /* LaunchScreen.storyboard */,
 				EE55A30A25B0966700F7009C /* Info.plist */,
+				EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE55A30125B0966500F7009C /* SignInVC.swift in Sources */,
+				EE1F27B825B186E700DA2CE9 /* SignInViewModel.swift in Sources */,
 				EE1F27A125B13B8400DA2CE9 /* SignInRoundedRectangle.swift in Sources */,
 				EE1F27A725B148C000DA2CE9 /* SignInVCExtension.swift in Sources */,
 				EE55A2FD25B0966500F7009C /* AppDelegate.swift in Sources */,
