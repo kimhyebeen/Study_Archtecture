@@ -6,7 +6,7 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 
 ## 🍎 (iOS) MVVM 패턴 예제 : SignIn
 * 간단한 로그인 화면 구현하기
-* RxSwift, RxCocoa 사용
+* RxSwift 사용 - PublishSubject, PublishRelay
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
 <img src="./SignIn-screen.png" width= 1000 />
 
