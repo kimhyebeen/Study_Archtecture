@@ -29,6 +29,8 @@ class SignInViewModel {
     struct Output {
         let enableSignInButton = PublishRelay<Bool>()
         let enableLogIn = PublishRelay<Bool>()
+        let emailStatus = PublishRelay<Bool>()
+        let passwordStatus = PublishRelay<Bool>()
     }
     
     init() {
@@ -38,6 +40,18 @@ class SignInViewModel {
             }.bind(to: output.enableSignInButton)
             .disposed(by: disposeBag)
 
+        input.email.map { [weak self] email in
+            if email.isEmpty { return true }
+            return self?.validateEmail(email) ?? false
+        }.bind(to: output.emailStatus)
+        .disposed(by: disposeBag)
+        
+        input.password.map { [weak self] pw in
+            if pw.isEmpty { return true }
+            return self?.validatePassword(pw) ?? false
+        }.bind(to: output.passwordStatus)
+        .disposed(by: disposeBag)
+        
         input.signInButton.withLatestFrom(Observable.combineLatest(input.email, input.password))
             .map { [weak self] (email, password) in
                 guard let self = self else { return false }
@@ -51,6 +65,7 @@ class SignInViewModel {
         
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegex)
+        
         return emailTest.evaluate(with: email)
     }
     
