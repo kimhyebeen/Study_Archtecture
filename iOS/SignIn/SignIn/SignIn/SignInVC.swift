@@ -16,7 +16,6 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         setupView()
         bindViewModel()
         setupSignUpButton()
@@ -58,11 +57,23 @@ class SignInVC: UIViewController {
     
     func moveToMain() {
         print("로그인되었습니다.")
+        let appWindow = UIApplication.shared.windows[0]
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+            let mainVC = MainVC()
+            mainVC.modalPresentationStyle = .fullScreen
+            appWindow.rootViewController?.show(mainVC, sender: nil)
+        })
     }
     
     @objc func moveToSignUp(_ sender: UIButton) {
         print("회원 가입으로 이동합니다.")
-//        self.dismiss(animated: true, completion: nil)
+        // for test
+        let appWindow = UIApplication.shared.windows[0]
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: {
+            let mainVC = MainVC()
+            mainVC.modalPresentationStyle = .fullScreen
+            appWindow.rootViewController?.show(mainVC, sender: nil)
+        })
     }
 
 }
