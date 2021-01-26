@@ -4,7 +4,7 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 <br />
 <br />
 | title | contents |
-| :-: | :-: |
+| :---: | :--- |
 | Architecture | MVVM |
 | Language | Swift |
 | UI | UIKit |
