@@ -3,6 +3,14 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 
 <br />
 <br />
+| title | contents |
+| :-: | :-: |
+| Architecture | MVVM |
+| Language | Swift |
+| UI | UIKit |
+| Network | Alamofire, RxSwift, RxCocoa |
+| Convention | SwiftLint |
+| Others | Github, Slack, Notion |
 
 ## 🍎 (iOS) MVVM 패턴 예제 : SignIn
 * 간단한 로그인 화면 구현하기
