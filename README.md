@@ -1,12 +1,27 @@
 # Study_Architecture
-iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
+iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
+
+<br />
+<br />
+
+## 🍎 (iOS) VIPER 패턴 예제 : SearchImage
+* [네이버 이미지 검색 API](https://developers.naver.com/docs/search/image/) 활용
+* `Alamofire`와 `CoreData` 사용
+* VIPER의 이점
+  + 재사용성과 테스트용이함을 위해 코드를 분리할 수 있다.
+  + 그 역할에 맞춰 앱 컴포넌트를 분리할 수 있으며, 이것을 seperation of concern이라 부른다.
+  + 새 기능을 추가하기 쉽다.
+  + UI 로직이 비지니스 로직으로부터 떨어져있기 때문에 자연스럽게 테스트를 만들기 쉬워진다.
+* 참고 : [VIPER-Architecture for iOS project with simple demo example.](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)
+* 참고 : [Building iOS App With VIPER Architecture](https://afteracademy.com/blog/building-ios-app-with-viper-architecture-8109acc72227)
+<img src="./SearchImage-diagram.png" width="800" />
 
 <br />
 <br />
 
 ## 🍎 (iOS) MVVM 패턴 예제 : SignIn
 * 간단한 로그인 화면 구현하기
-* RxSwift 사용 - PublishSubject, PublishRelay
+* `RxSwift` 사용 - PublishSubject, PublishRelay
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
 <img src="./SignIn-screen.png" width= 1000 />
 
@@ -15,7 +30,7 @@ iOS, AOS의 다양한 기술을 활용하면서 MVVM, MVP, MVI 등의 아키텍�
 
 ## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
-* Alamofire 사용
+* `Alamofire` 사용
 * 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 사용하였다.
 <details>
 <summary>Observable<T> 객체 (클릭하면 펼쳐집니다)</summary>
@@ -54,8 +69,7 @@ final class Observable<T> {
 <br />
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contacts01
-* LiveData 사용
-* CoRoutine 사용
+* `LiveData`, `CoRoutine` 사용
 * 연락처목록 만들기 애플리케이션
 <img src="./Contacts01-diagram.png" width=500 />
 
@@ -63,9 +77,7 @@ final class Observable<T> {
 <br />
 
 ## 💫 (AOS) MVVM 패턴 예제 : Contracts03
-* DataBinding 사용
-* LiveData 사용
-* CoRoutine 대신 RxKotlin 사용
+* `DataBinding`, `LiveData`, `RxKotlin` 사용
 * 블로그 정리 : [RecyclerView에 DataBinding 적용하기](https://beenii.tistory.com/103)
 * 연락처 목록 만들기 애플리케이션
 * RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
