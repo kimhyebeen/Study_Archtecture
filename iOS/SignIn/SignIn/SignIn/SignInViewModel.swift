@@ -6,6 +6,7 @@
 //
 import RxSwift
 import RxCocoa
+import NaverThirdPartyLogin
 
 struct LoginModel {
     func requestLogin(_ email: String, _ password: String) -> Int {

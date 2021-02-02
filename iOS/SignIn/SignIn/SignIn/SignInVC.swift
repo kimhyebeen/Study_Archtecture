@@ -7,18 +7,31 @@
 
 import UIKit
 import RxSwift
+import NaverThirdPartyLogin
 
 class SignInVC: UIViewController {
     let roundedRectangle = SignInRoundedRectangle()
     let vm = SignInViewModel()
     let disposeBag = DisposeBag()
+    
+    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        loginInstance?.delegate = self
+        
         setupView()
         bindViewModel()
-        setupSignUpButton()
+    }
+    
+    func setupView() {
+        setupBackgroundImage()
+        setupSignInRoundedRectangle()
+        setupTabGesture()
+        
+        roundedRectangle.signInForm.emailTextField.delegate = self
+        roundedRectangle.signInForm.passwordTextField.delegate = self
     }
     
     func bindViewModel() {
@@ -51,12 +64,11 @@ class SignInVC: UIViewController {
         }).disposed(by: disposeBag)
     }
     
-    func setupSignUpButton() {
-        roundedRectangle.signUpButton.addTarget(self, action: #selector(moveToSignUp(_:)), for: .touchUpInside)
+    @objc func clickNaverSignInButton(_ sender: UIButton) {
+        loginInstance?.requestThirdPartyLogin()
     }
     
     func moveToMain() {
-        print("로그인되었습니다.")
         let appWindow = UIApplication.shared.windows[0]
         self.view.window?.rootViewController?.dismiss(animated: true, completion: {
             let mainVC = MainVC()
@@ -67,13 +79,13 @@ class SignInVC: UIViewController {
     
     @objc func moveToSignUp(_ sender: UIButton) {
         print("회원 가입으로 이동합니다.")
-        // for test
-        let appWindow = UIApplication.shared.windows[0]
-        self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-            let mainVC = MainVC()
-            mainVC.modalPresentationStyle = .fullScreen
-            appWindow.rootViewController?.show(mainVC, sender: nil)
-        })
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let nextVC = segue.destination as? MainVC else {
+            return
+        }
+        
+        nextVC.email = roundedRectangle.signInForm.emailTextField.text ?? ""
+    }
 }
