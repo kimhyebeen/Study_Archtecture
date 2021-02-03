@@ -1,6 +1,7 @@
 
 .DS_Store
 */.DS_Store
+Podfile.lock
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/xcode,swift,cocoapods
