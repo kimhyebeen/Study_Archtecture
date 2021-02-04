@@ -14,6 +14,14 @@ class MainViewController: UIViewController {
             $0.placeholder = "이미지를 검색해주세요."
             $0.setShowsCancelButton(true, animated: true)
         }
+    var imageCollectionView: UICollectionView!
+    let flowLayout = UICollectionViewFlowLayout()
+        .then {
+            $0.itemSize = CGSize(width: (UIScreen.main.bounds.width-8)/3, height: (UIScreen.main.bounds.width-8)/3)
+            $0.scrollDirection = .vertical
+        }
+    
+    var images: [ImageEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
