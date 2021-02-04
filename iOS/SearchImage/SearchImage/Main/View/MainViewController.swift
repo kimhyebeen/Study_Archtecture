@@ -34,6 +34,7 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .white
         
         setupSearchBar()
+        setupImageCollectionView()
     }
 
 }

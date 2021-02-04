@@ -31,7 +31,7 @@ extension MainViewController {
         imageCollectionView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
-    func setupImageCollectionViewSetting() {
+    private func setupImageCollectionViewSetting() {
         imageCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: flowLayout)
             .then {
                 $0.register(ImageCollectionCell.self, forCellWithReuseIdentifier: ImageCollectionCell.identifier)

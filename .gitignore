@@ -49,3 +49,5 @@ DerivedData/
 
 # End of https://www.toptal.com/developers/gitignore/api/xcode
 
+
+iOS/SearchImage/SearchImage/Data/SecretKeySet.swift
