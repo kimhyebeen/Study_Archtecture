@@ -11,7 +11,7 @@ protocol MainViewToPresenterProtocol: class{
     var view: MainViewProtocol? { get set }
     var interactor: MainInteractorProtocol? { get set }
     var router: MainRouterProtocol? { get set }
-    func startRequestImages(word: String)
+    func requestSearchImages(word: String)
     func showMovieController(navigationController: UINavigationController)
 }
 
@@ -27,7 +27,7 @@ protocol MainRouterProtocol: class {
 
 protocol MainInteractorProtocol: class {
     var presenter: MainInteractorToPresenterProtocol? { get set }
-    func requestSearchedImages()
+    func requestSearchImages(word: String)
 }
 
 protocol MainInteractorToPresenterProtocol: class {
