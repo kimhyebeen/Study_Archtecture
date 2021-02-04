@@ -13,6 +13,7 @@ class ImageCollectionCell: UICollectionViewCell {
         .then {
             $0.contentMode = .scaleAspectFill
             $0.image = UIImage(named: "emptyImage")!
+            $0.clipsToBounds = true
         }
     
     override init(frame: CGRect) {
@@ -41,13 +42,13 @@ class ImageCollectionCell: UICollectionViewCell {
         DispatchQueue.global().async {
             guard let url: URL = URL(string: link) else {
                 DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "empty_image")
+                    self.imageView.image = UIImage(named: "emptyImage")
                 }
                 return
             }
             guard let imageData: Data = try? Data(contentsOf: url) else {
                 DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "empty_image")
+                    self.imageView.image = UIImage(named: "emptyImage")
                 }
                 return
             }

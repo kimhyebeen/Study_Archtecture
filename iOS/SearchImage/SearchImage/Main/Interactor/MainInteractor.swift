@@ -11,7 +11,6 @@ class MainInteractor: MainInteractorProtocol {
     var presenter: MainInteractorToPresenterProtocol?
     
     func requestSearchImages(word: String) {
-        print("interactor - request search images")
         AF.request(
             "https://openapi.naver.com/v1/search/image",
             method: .get,

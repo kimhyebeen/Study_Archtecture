@@ -52,7 +52,6 @@ extension MainViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text, !text.isEmpty else { return }
         presentor?.requestSearchImages(word: text)
-        searchBar.text = ""
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
