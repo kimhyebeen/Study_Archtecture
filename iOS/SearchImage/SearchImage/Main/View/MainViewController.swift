@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     }
 
     func setupView() {
+        self.title = "이미지 검색"
         self.view.backgroundColor = .white
         
         setupSearchBar()
