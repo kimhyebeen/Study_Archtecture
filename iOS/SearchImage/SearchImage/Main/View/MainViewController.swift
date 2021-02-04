@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
         }
     
     var images: [ImageEntity] = []
+    var presentor: MainViewToPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()

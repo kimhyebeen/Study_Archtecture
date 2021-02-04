@@ -16,7 +16,7 @@ class MainPresenter: MainViewToPresenterProtocol {
         interactor?.requestSearchImages(word: word)
     }
     
-    func showMovieController(navigationController: UINavigationController) {
+    func showDetailImageScreen(navigationController: UINavigationController) {
         router?.pushToDetailImageScreen(navigationConroller: navigationController)
     }
     

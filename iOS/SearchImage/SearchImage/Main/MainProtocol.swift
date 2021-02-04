@@ -7,15 +7,16 @@
 
 import UIKit
 
-protocol MainViewToPresenterProtocol: class{
+protocol MainViewToPresenterProtocol: class {
     var view: MainViewProtocol? { get set }
     var interactor: MainInteractorProtocol? { get set }
     var router: MainRouterProtocol? { get set }
     func requestSearchImages(word: String)
-    func showMovieController(navigationController: UINavigationController)
+    func showDetailImageScreen(navigationController: UINavigationController)
 }
 
-protocol MainViewProtocol: class{
+protocol MainViewProtocol: class {
+    var presentor: MainViewToPresenterProtocol? { get set }
     func showImages(items: [ImageEntity])
     func showError()
 }
