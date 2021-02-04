@@ -12,6 +12,7 @@ class ImageCollectionCell: UICollectionViewCell {
     let imageView = UIImageView()
         .then {
             $0.contentMode = .scaleAspectFill
+            $0.image = UIImage(named: "emptyImage")!
         }
     
     override init(frame: CGRect) {
@@ -34,5 +35,26 @@ class ImageCollectionCell: UICollectionViewCell {
         imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
+    }
+    
+    func setImage(link: String) {
+        DispatchQueue.global().async {
+            guard let url: URL = URL(string: link) else {
+                DispatchQueue.main.async {
+                    self.imageView.image = UIImage(named: "empty_image")
+                }
+                return
+            }
+            guard let imageData: Data = try? Data(contentsOf: url) else {
+                DispatchQueue.main.async {
+                    self.imageView.image = UIImage(named: "empty_image")
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.imageView.image = UIImage(data: imageData)
+            }
+        }
     }
 }
