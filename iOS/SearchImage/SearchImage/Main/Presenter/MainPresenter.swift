@@ -13,7 +13,7 @@ class MainPresenter: MainViewToPresenterProtocol {
     var router: MainRouterProtocol?
     
     func requestSearchImages(word: String) {
-        interactor?.requestSearchImages(word: word)
+        interactor?.fetchImageData(word: word)
     }
     
     func showDetailImageScreen(navigationController: UINavigationController) {

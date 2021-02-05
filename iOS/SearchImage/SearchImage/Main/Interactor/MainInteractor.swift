@@ -11,7 +11,28 @@ import Alamofire
 class MainInteractor: MainInteractorProtocol {
     var presenter: MainInteractorToPresenterProtocol?
     
-    func requestSearchImages(word: String) {
+    func fetchImageData(word: String) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext! = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let data = try context.fetch(ImageData.fetchRequest()) as! [ImageData]
+            
+            if data.count == 0 {
+                print("네트워크로 요청합니다.")
+                self.requestSearchImages(word: word)
+                return
+            }
+            
+            let images: [ImageEntity] = data.map { ImageEntity(link: $0.link ?? "", thumbnail: $0.thumbnail ?? "") }
+            print("데이터베이스에서 가져옵니다.")
+            self.presenter?.imageFetchedSuccess(items: images)
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    private func requestSearchImages(word: String) {
         AF.request(
             "https://openapi.naver.com/v1/search/image",
             method: .get,

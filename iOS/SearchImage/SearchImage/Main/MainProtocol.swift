@@ -28,7 +28,7 @@ protocol MainRouterProtocol: class {
 
 protocol MainInteractorProtocol: class {
     var presenter: MainInteractorToPresenterProtocol? { get set }
-    func requestSearchImages(word: String)
+    func fetchImageData(word: String)
 }
 
 protocol MainInteractorToPresenterProtocol: class {
