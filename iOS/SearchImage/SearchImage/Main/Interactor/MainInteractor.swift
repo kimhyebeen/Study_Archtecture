@@ -14,9 +14,11 @@ class MainInteractor: MainInteractorProtocol {
     func fetchImageData(word: String) {
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext! = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "ImageData")
+        fetchRequest.predicate = NSPredicate(format: "word == %@", word)
         
         do {
-            let data = try context.fetch(ImageData.fetchRequest()) as! [ImageData]
+            let data = try context.fetch(fetchRequest) as! [ImageData]
             
             if data.count == 0 {
                 print("네트워크로 요청합니다.")
