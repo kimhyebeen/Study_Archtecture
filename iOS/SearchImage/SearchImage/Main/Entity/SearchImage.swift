@@ -8,7 +8,6 @@
 import Foundation
 
 struct ImageEntity: Codable {
-    var title: String
     var link: String
     var thumbnail: String
 }

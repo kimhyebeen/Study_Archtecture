@@ -5,6 +5,7 @@
 //  Created by 김혜빈 on 2021/02/05.
 //
 
+import CoreData
 import Alamofire
 
 class MainInteractor: MainInteractorProtocol {
@@ -27,11 +28,30 @@ class MainInteractor: MainInteractorProtocol {
                 return
             }
             
-            self.presenter?.imageFetchedSuccess(items:
-                items.map { item in
-                    ImageEntity(title: item.title, link: item.link, thumbnail: item.thumbnail)
-                }
-            )
+            let images: [ImageEntity] = items.map { ImageEntity(link: $0.link, thumbnail: $0.thumbnail) }
+            self.presenter?.imageFetchedSuccess(items: images)
+            for img in images {
+                self.saveImageData(word: word, item: img)
+            }
+        }
+    }
+    
+    private func saveImageData(word: String, item: ImageEntity) {
+        let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext! = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "ImageData", in: context)
+        
+        if let entity = entity {
+            let data = NSManagedObject(entity: entity, insertInto: context)
+            data.setValue(word, forKey: "word")
+            data.setValue(item.link, forKey: "link")
+            data.setValue(item.thumbnail, forKey: "thumbnail")
+            
+            do {
+                try context.save()
+            } catch {
+                print("MainInteractor-saveImageData error: \(error.localizedDescription)")
+            }
         }
     }
 }
