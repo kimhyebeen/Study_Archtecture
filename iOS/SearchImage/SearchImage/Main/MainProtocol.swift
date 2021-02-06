@@ -12,7 +12,7 @@ protocol MainViewToPresenterProtocol: class {
     var interactor: MainInteractorProtocol? { get set }
     var router: MainRouterProtocol? { get set }
     func requestSearchImages(word: String)
-    func showDetailImageScreen(navigationController: UINavigationController)
+    func showDetailImageScreen(navigationController: UINavigationController, link: String)
 }
 
 protocol MainViewProtocol: class {
@@ -23,7 +23,7 @@ protocol MainViewProtocol: class {
 
 protocol MainRouterProtocol: class {
     static func createModule() -> MainViewController
-    func pushToDetailImageScreen(navigationConroller: UINavigationController)
+    func pushToDetailImageScreen(navigationController: UINavigationController, link: String)
 }
 
 protocol MainInteractorProtocol: class {

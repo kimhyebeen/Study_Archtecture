@@ -42,7 +42,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             return true
         }
         
-        presentor?.showDetailImageScreen(navigationController: nc)
+        presentor?.showDetailImageScreen(navigationController: nc, link: images[indexPath.item].link)
         return true
     }
 }

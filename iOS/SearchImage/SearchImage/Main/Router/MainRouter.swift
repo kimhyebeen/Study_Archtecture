@@ -24,8 +24,8 @@ class MainRouter: MainRouterProtocol {
         return view
     }
     
-    func pushToDetailImageScreen(navigationConroller: UINavigationController) {
-        let detailImageModue = DetailImageRouter.createModule()
-        navigationController.pushViewController(detailImageModue, animated: true)
+    func pushToDetailImageScreen(navigationController: UINavigationController, link: String) {
+        let detailModue = DetailRouter.createModule(link: link)
+        navigationController.pushViewController(detailModue, animated: true)
     }
 }

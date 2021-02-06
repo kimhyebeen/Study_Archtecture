@@ -16,8 +16,8 @@ class MainPresenter: MainViewToPresenterProtocol {
         interactor?.fetchImageData(word: word)
     }
     
-    func showDetailImageScreen(navigationController: UINavigationController) {
-        router?.pushToDetailImageScreen(navigationConroller: navigationController)
+    func showDetailImageScreen(navigationController: UINavigationController, link: String) {
+        router?.pushToDetailImageScreen(navigationController: navigationController, link: link)
     }
     
 }
