@@ -8,6 +8,7 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,14 @@ class DetailViewController: UIViewController {
 extension DetailViewController {
     // MARK: Scroll View
     func setupScrollView() {
+        scrollView = UIScrollView(frame: self.view.bounds)
+        self.view.addSubview(scrollView)
         
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
     // MARK: Image View
