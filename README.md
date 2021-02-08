@@ -3,12 +3,18 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 
  
 
-* [iOS - VIPER 패턴 예제 - SearchImage](#🍎iOS-VIPER-SearchImage)
+* [🍎 iOS-VIPER 패턴 예제-SearchImage](#iOS-VIPER-SearchImage)
+* [🍎 iOS-MVVM 패턴 예제-SignIn](#iOS-MVVM-SignIn)
+* [🍎 iOS-MVVM 패턴 예제-Dictionary01](#iOS-MVVM-Dictionary01)
+* [💫 AOS-MVVM 패턴 예제-Contacts01](#AOS-MVVM-Contacts01)
+* [💫 AOS-MVVM 패턴 예제-Contracts03](#AOS-MVVM-Contracts03)
+* [💫 AOS-MVP 패턴 예제-DogList01](#AOS-MVP-DogList01)
+* [Ohters](#Others)
 
 <br />
 <br />
 
-## 🍎iOS-VIPER-SearchImage
+## iOS-VIPER-SearchImage
 * [네이버 이미지 검색 API](https://developers.naver.com/docs/search/image/) 활용
 * `Alamofire`와 `CoreData` 사용
 * VIPER의 이점
@@ -34,7 +40,7 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 <br />
 <br />
 
-## 🍎 (iOS) MVVM 패턴 예제 : SignIn
+## iOS-MVVM-SignIn
 * 간단한 로그인 화면 구현하기
 * `RxSwift` 사용 - PublishSubject, PublishRelay
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
@@ -43,7 +49,7 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 <br />
 <br />
 
-## 🍎 (iOS) MVVM 패턴 예제 : Dictionary01
+## iOS-MVVM-Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
 * `Alamofire` 사용
 * 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 사용하였다.
@@ -83,7 +89,7 @@ final class Observable<T> {
 <br />
 <br />
 
-## 💫 (AOS) MVVM 패턴 예제 : Contacts01
+## AOS-MVVM-Contacts01
 * `LiveData`, `CoRoutine` 사용
 * 연락처목록 만들기 애플리케이션
 <img src="./Contacts01-diagram.png" width=500 />
@@ -91,7 +97,7 @@ final class Observable<T> {
 <br />
 <br />
 
-## 💫 (AOS) MVVM 패턴 예제 : Contracts03
+## AOS-MVVM-Contracts03
 * `DataBinding`, `LiveData`, `RxKotlin` 사용
 * 블로그 정리 : [RecyclerView에 DataBinding 적용하기](https://beenii.tistory.com/103)
 * 연락처 목록 만들기 애플리케이션
@@ -101,7 +107,7 @@ final class Observable<T> {
 <br />
 <br />
 
-## 💫 (AOS) MVP 패턴 예제 : DogList01
+## AOS-MVP-DogList01
 * 네트워크 작업을 임의로 Handler로 시간차를 두어 구현
 * 각 Base 클래스들을 분리하여 추상화 과정 진행
 <img src="./DogList01-diagram.png" width=800 />
