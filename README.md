@@ -16,7 +16,16 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 * 참고 : [Building iOS App With VIPER Architecture](https://afteracademy.com/blog/building-ios-app-with-viper-architecture-8109acc72227)
 * 참고: [Zedd - Core Data](https://zeddios.tistory.com/987)
 
-<img src="./SearchImage-diagram.png" width="800" />
+<details>
+<summary>ScreenShot (클릭하면 펼쳐집니다)</summary>
+<div markdown="1">
+
+<img src="./SearchImage-screen.png" width="1000" />
+
+</div>
+</details>
+
+<img src="./viper-diagram.png" width="600" />
 
 <br />
 <br />
