@@ -3,12 +3,12 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 
  
 
-* [iOS - VIPER 패턴 예제 - SearchImage](#iOS-VIPER-SearchImage)
+* [iOS - VIPER 패턴 예제 - SearchImage](#🍎iOS-VIPER-SearchImage)
 
 <br />
 <br />
 
-## iOS-VIPER-SearchImage
+## 🍎iOS-VIPER-SearchImage
 * [네이버 이미지 검색 API](https://developers.naver.com/docs/search/image/) 활용
 * `Alamofire`와 `CoreData` 사용
 * VIPER의 이점
