@@ -3,7 +3,7 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 
  
 
-* [iOS - VIPER 패턴 예제 - SearchImage](#🍎_(iOS)_VIPER_패턴_예제_:_SearchImage)
+* [iOS - VIPER 패턴 예제 - SearchImage](#🍎 (iOS) VIPER 패턴 예제 : SearchImageheading)
 
 <br />
 <br />
