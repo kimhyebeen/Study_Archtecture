@@ -24,7 +24,7 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
   + UI 로직이 비지니스 로직으로부터 떨어져있기 때문에 자연스럽게 테스트를 만들기 쉬워진다.
 * 참고 : [VIPER-Architecture for iOS project with simple demo example.](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)
 * 참고 : [Building iOS App With VIPER Architecture](https://afteracademy.com/blog/building-ios-app-with-viper-architecture-8109acc72227)
-* 참고: [Zedd - Core Data](https://zeddios.tistory.com/987)
+* 참고: [Zeddios - Core Data](https://zeddios.tistory.com/987)
 
 <details>
 <summary>ScreenShot (클릭하면 펼쳐집니다)</summary>
