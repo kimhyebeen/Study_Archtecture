@@ -7,11 +7,12 @@
 
 import UIKit
 
-extension SignInVC {
+extension SignInViewController {
     enum ConstantSize: CGFloat {
         case leadingFromScrollView = 30
     }
     
+    // MARK: BackgroundImage
     func setupBackgroundImage() {
         let backgroundImage = UIImageView(image: UIImage(named: "mountains"))
         self.view.addSubview(backgroundImage)
@@ -24,6 +25,7 @@ extension SignInVC {
         backgroundImage.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
+    // MARK: SignInRoundedRectangle
     func setupSignInRoundedRectangle() {
         roundedRectangle.naverSignInButton.addTarget(self, action: #selector(clickNaverSignInButton(_:)), for: .touchUpInside)
         roundedRectangle.signUpButton.addTarget(self, action: #selector(moveToSignUp(_:)), for: .touchUpInside)
@@ -36,6 +38,7 @@ extension SignInVC {
         roundedRectangle.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
+    // MARK: TabGesture
     func setupTabGesture() {
         let tapGesture = UITapGestureRecognizer()
         tapGesture.delegate = self

@@ -19,16 +19,14 @@ class ImageCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupView()
+        setupImageView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-        setupView()
     }
     
-    func setupView() {
+    func setupImageView() {
         self.addSubview(imageView)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,21 +39,23 @@ class ImageCollectionCell: UICollectionViewCell {
     func setImage(link: String) {
         DispatchQueue.global().async {
             guard let url: URL = URL(string: link) else {
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "emptyImage")
-                }
+                self.setupEmptyImage()
                 return
             }
             guard let imageData: Data = try? Data(contentsOf: url) else {
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "emptyImage")
-                }
+                self.setupEmptyImage()
                 return
             }
             
             DispatchQueue.main.async {
                 self.imageView.image = UIImage(data: imageData)
             }
+        }
+    }
+    
+    private func setupEmptyImage() {
+        DispatchQueue.main.async { [weak self] in
+            self?.imageView.image = UIImage(named: "emptyImage")
         }
     }
 }

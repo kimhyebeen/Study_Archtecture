@@ -8,9 +8,10 @@
 import UIKit
 
 class SignInRoundedRectangle: UIView {
+    private let contentsView = UIView()
+    private let titleLabel = UILabel()
+    private let labelAboveSignUpButton = UILabel()
     let scrollView = UIScrollView()
-    let contentsView = UIView()
-    let titleLabel = UILabel()
     let signInForm = SignInForm()
     let signInButton = UIButton()
     let naverSignInButton = UIButton()
@@ -28,11 +29,9 @@ class SignInRoundedRectangle: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
-        setupView()
     }
     
-    func setupView() {
+    private func setupView() {
         self.layer.cornerRadius = 30
         self.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.layer.shadowColor = UIColor.black.cgColor
@@ -45,6 +44,7 @@ class SignInRoundedRectangle: UIView {
         setupSignInForm()
         setupSignInButton()
         setupNaverSignInButton()
+        setupLabelAboveSignUpButton()
         setupSignUpButton()
         setupContentView()
         setupScrollView()
@@ -58,8 +58,8 @@ class SignInRoundedRectangle: UIView {
     
 }
 
-// MARK: +UI
 extension SignInRoundedRectangle {
+    // MARK: TitleLabel
     func setupTitleLabel() {
         titleLabel.text = "로그인"
         titleLabel.font = UIFont.systemFont(ofSize: 30)
@@ -71,6 +71,7 @@ extension SignInRoundedRectangle {
         titleLabel.leadingAnchor.constraint(equalTo: contentsView.leadingAnchor, constant: 20).isActive = true
     }
     
+    // MARK: SignInForm
     func setupSignInForm() {
         contentsView.addSubview(signInForm)
         
@@ -80,6 +81,7 @@ extension SignInRoundedRectangle {
         signInForm.trailingAnchor.constraint(equalTo: contentsView.trailingAnchor, constant: ConstantSize.leadingFromScrollView.rawValue * -1).isActive = true
     }
     
+    // MARK: SignInButton
     func setupSignInButton() {
         signInButton.setTitle("Sign In", for: .normal)
         signInButton.layer.cornerRadius = 22.5
@@ -94,6 +96,7 @@ extension SignInRoundedRectangle {
         signInButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
     }
     
+    // MARK: NaverSignInButton
     func setupNaverSignInButton() {
         naverSignInButton.setImage(UIImage(named: "naver_login"), for: .normal)
         contentsView.addSubview(naverSignInButton)
@@ -106,31 +109,34 @@ extension SignInRoundedRectangle {
         
     }
     
+    // MARK: LabelAboveSignUpButton
+    func setupLabelAboveSignUpButton() {
+        labelAboveSignUpButton.text = "아직 회원이 아니신가요?"
+        labelAboveSignUpButton.font = UIFont.systemFont(ofSize: 14)
+        labelAboveSignUpButton.textColor = .systemGray
+        contentsView.addSubview(labelAboveSignUpButton)
+        
+        labelAboveSignUpButton.translatesAutoresizingMaskIntoConstraints = false
+        labelAboveSignUpButton.topAnchor.constraint(equalTo: naverSignInButton.bottomAnchor, constant: 20).isActive = true
+        labelAboveSignUpButton.centerXAnchor.constraint(equalTo: contentsView.centerXAnchor).isActive = true
+    }
+    
+    // MARK: SignUpButton
     func setupSignUpButton() {
-        let label = UILabel()
-        label.text = "아직 회원이 아니신가요?"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.textColor = .systemGray
-        contentsView.addSubview(label)
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.topAnchor.constraint(equalTo: naverSignInButton.bottomAnchor, constant: 20).isActive = true
-        label.centerXAnchor.constraint(equalTo: contentsView.centerXAnchor).isActive = true
-
-        
         signUpButton.setTitle("회원가입", for: .normal)
         signUpButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         signUpButton.setTitleColor(.systemBlue, for: .normal)
         contentsView.addSubview(signUpButton)
 
         signUpButton.translatesAutoresizingMaskIntoConstraints = false
-        signUpButton.topAnchor.constraint(equalTo: label.bottomAnchor, constant: -8).isActive = true
+        signUpButton.topAnchor.constraint(equalTo: labelAboveSignUpButton.bottomAnchor, constant: -8).isActive = true
         signUpButton.centerXAnchor.constraint(equalTo: contentsView.centerXAnchor).isActive = true
         signUpButton.widthAnchor.constraint(equalToConstant: 80).isActive = true
         signUpButton.heightAnchor.constraint(equalToConstant: 45).isActive = true
         signUpButton.bottomAnchor.constraint(greaterThanOrEqualTo: contentsView.bottomAnchor, constant: -50).isActive = true
     }
     
+    // MARK: ContentView
     func setupContentView() {
         scrollView.addSubview(contentsView)
         
@@ -142,6 +148,7 @@ extension SignInRoundedRectangle {
         contentsView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
     }
     
+    // MARK: ScrollView
     func setupScrollView() {
         self.addSubview(scrollView)
         contentsView.bounds.size = CGSize(width: scrollView.frame.width, height: 550)

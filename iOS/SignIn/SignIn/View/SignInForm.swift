@@ -9,13 +9,13 @@ import UIKit
 
 class SignInForm: UIView {
     private let emailLabel = UILabel()
-    let emailTextField = UITextField()
     private let emailDivider = UIView()
     private let emailFailureLabel = UILabel()
     private let passwordLabel = UILabel()
-    let passwordTextField = UITextField()
     private let passwordDivider = UIView()
     private let passwordFailureLabel = UILabel()
+    let emailTextField = UITextField()
+    let passwordTextField = UITextField()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,24 +29,25 @@ class SignInForm: UIView {
         setupView()
     }
     
+    private func setupView() {
+        setupEmailLabel()
+        setupEmailTextField()
+        setupEmailDivider()
+        setupEmailFailureLabel()
+        setupPasswordLabel()
+        setupPasswordTextField()
+        setupPasswordDivider()
+        setupPasswordFailureLabel()
+    }
+    
     func setFocusDesignEmailTextField(isFocus: Bool) {
-        if isFocus {
-            emailLabel.textColor = UIColor(named: "ButtonColor")
-            emailDivider.backgroundColor = UIColor(named: "ButtonColor")
-        } else {
-            emailLabel.textColor = .systemGray
-            emailDivider.backgroundColor = .systemGray
-        }
+        emailLabel.textColor = isFocus ? UIColor(named: "ButtonColor") : .systemGray
+        emailDivider.backgroundColor = isFocus ? UIColor(named: "ButtonColor") : .systemGray
     }
     
     func setFocusDesignPasswordTextField(isFocus: Bool) {
-        if isFocus {
-            passwordLabel.textColor = UIColor(named: "ButtonColor")
-            passwordDivider.backgroundColor = UIColor(named: "ButtonColor")
-        } else {
-            passwordLabel.textColor = .systemGray
-            passwordDivider.backgroundColor = .systemGray
-        }
+        passwordLabel.textColor = isFocus ? UIColor(named: "ButtonColor") : .systemGray
+        passwordDivider.backgroundColor = isFocus ? UIColor(named: "ButtonColor") : .systemGray
     }
     
     func setEmailFailrueLabel(isCorrect: Bool) {
@@ -60,15 +61,7 @@ class SignInForm: UIView {
 }
 
 extension SignInForm {
-    func setupView() {
-        setupEmailLabel()
-        setupEmailTextField()
-        setupEmailFailureLabel()
-        setupPasswordLabel()
-        setupPasswordTextField()
-        setupPasswordFailureLabel()
-    }
-    
+    // MARK: EmailLabel
     func setupEmailLabel() {
         emailLabel.text = "이메일"
         emailLabel.textColor = .systemGray
@@ -79,6 +72,7 @@ extension SignInForm {
         emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     }
     
+    // MARK: EmailTextField
     func setupEmailTextField() {
         emailTextField.textColor = .darkGray
         emailTextField.attributedPlaceholder = NSAttributedString(string: "이메일을 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
@@ -88,7 +82,10 @@ extension SignInForm {
         emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 8).isActive = true
         emailTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         emailTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        
+    }
+    
+    // MARK: EmailDivider
+    func setupEmailDivider() {
         emailDivider.backgroundColor = .systemGray
         self.addSubview(emailDivider)
         
@@ -99,6 +96,7 @@ extension SignInForm {
         emailDivider.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    // MARK: EmailFailureLabel
     func setupEmailFailureLabel() {
         emailFailureLabel.text = "이메일 형식이 올바르지 않습니다"
         emailFailureLabel.font = UIFont.systemFont(ofSize: 12)
@@ -111,6 +109,7 @@ extension SignInForm {
         emailFailureLabel.trailingAnchor.constraint(equalTo: emailDivider.trailingAnchor).isActive = true
     }
     
+    // MARK: PasswordLabel
     func setupPasswordLabel() {
         passwordLabel.text = "비밀번호"
         passwordLabel.textColor = .systemGray
@@ -121,6 +120,7 @@ extension SignInForm {
         passwordLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
     }
     
+    // MARK: PasswordTextField
     func setupPasswordTextField() {
         passwordTextField.textColor = .darkGray
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "비밀번호를 입력해주세요", attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
@@ -132,7 +132,10 @@ extension SignInForm {
         passwordTextField.topAnchor.constraint(equalTo: passwordLabel.bottomAnchor, constant: 8).isActive = true
         passwordTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor).isActive = true
         passwordTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor).isActive = true
-        
+    }
+    
+    // MARK: PasswordDivider
+    func setupPasswordDivider() {
         passwordDivider.backgroundColor = .systemGray
         self.addSubview(passwordDivider)
         
@@ -143,6 +146,7 @@ extension SignInForm {
         passwordDivider.heightAnchor.constraint(equalToConstant: 1).isActive = true
     }
     
+    // MARK: PasswordFailureLabel
     func setupPasswordFailureLabel() {
         passwordFailureLabel.text = "8~16자리를 입력해주세요"
         passwordFailureLabel.font = UIFont.systemFont(ofSize: 12)

@@ -8,7 +8,7 @@
 import UIKit
 import NaverThirdPartyLogin
 
-extension SignInVC: UIGestureRecognizerDelegate, UITextFieldDelegate {
+extension SignInViewController: UIGestureRecognizerDelegate, UITextFieldDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
         self.view.endEditing(true)
         return true
@@ -21,7 +21,6 @@ extension SignInVC: UIGestureRecognizerDelegate, UITextFieldDelegate {
         case roundedRectangle.signInForm.passwordTextField:
             roundedRectangle.signInForm.setFocusDesignPasswordTextField(isFocus: true)
             roundedRectangle.scrollView.setContentOffset(CGPoint(x: 0, y: roundedRectangle.signInForm.passwordTextField.frame.maxY-70), animated: true)
-            
         default:
             print("text field should begin editing - default")
         }
@@ -42,7 +41,7 @@ extension SignInVC: UIGestureRecognizerDelegate, UITextFieldDelegate {
     }
 }
 
-extension SignInVC: NaverThirdPartyLoginConnectionDelegate {
+extension SignInViewController: NaverThirdPartyLoginConnectionDelegate {
     func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
         print("Success login")
         self.moveToMain()

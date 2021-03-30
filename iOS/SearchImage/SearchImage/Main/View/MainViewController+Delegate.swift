@@ -7,7 +7,7 @@
 
 import UIKit
 
-// MARK: Main View Protocol
+// MARK: MainViewProtocol
 extension MainViewController: MainViewProtocol {
     func showImages(items: [ImageEntity]) {
         images = items
@@ -17,10 +17,9 @@ extension MainViewController: MainViewProtocol {
     func showError() {
         print("MainViewController - error 발생")
     }
-    
 }
 
-// MARK: Collection View
+// MARK: CollectionView
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
@@ -47,7 +46,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
 }
 
-// MARK: Search Bar
+// MARK: SearchBar
 extension MainViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text, !text.isEmpty else { return }

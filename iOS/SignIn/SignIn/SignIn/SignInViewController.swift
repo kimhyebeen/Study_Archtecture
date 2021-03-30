@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import NaverThirdPartyLogin
 
-class SignInVC: UIViewController {
+class SignInViewController: UIViewController {
     let roundedRectangle = SignInRoundedRectangle()
     let vm = SignInViewModel()
     let disposeBag = DisposeBag()
@@ -25,7 +25,7 @@ class SignInVC: UIViewController {
         bindViewModel()
     }
     
-    func setupView() {
+    private func setupView() {
         setupBackgroundImage()
         setupSignInRoundedRectangle()
         setupTabGesture()
@@ -34,7 +34,7 @@ class SignInVC: UIViewController {
         roundedRectangle.signInForm.passwordTextField.delegate = self
     }
     
-    func bindViewModel() {
+    private func bindViewModel() {
         roundedRectangle.signInForm.emailTextField.rx.text.orEmpty
             .bind(to: vm.input.email)
             .disposed(by: disposeBag)
@@ -71,7 +71,7 @@ class SignInVC: UIViewController {
     func moveToMain() {
         let appWindow = UIApplication.shared.windows[0]
         self.view.window?.rootViewController?.dismiss(animated: true, completion: {
-            let mainVC = MainVC()
+            let mainVC = MainViewController()
             mainVC.modalPresentationStyle = .fullScreen
             appWindow.rootViewController?.show(mainVC, sender: nil)
         })
@@ -82,7 +82,7 @@ class SignInVC: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let nextVC = segue.destination as? MainVC else {
+        guard let nextVC = segue.destination as? MainViewController else {
             return
         }
         

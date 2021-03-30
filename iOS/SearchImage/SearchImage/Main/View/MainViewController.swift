@@ -10,18 +10,8 @@ import Then
 
 class MainViewController: UIViewController {
     let searchBar = UISearchBar()
-        .then {
-            $0.placeholder = "이미지를 검색해주세요."
-            $0.setShowsCancelButton(true, animated: true)
-        }
     var imageCollectionView: UICollectionView!
     let flowLayout = UICollectionViewFlowLayout()
-        .then {
-            $0.itemSize = CGSize(width: (UIScreen.main.bounds.width-8) / 3, height: (UIScreen.main.bounds.width-8) / 3)
-            $0.scrollDirection = .vertical
-            $0.minimumLineSpacing = 4
-            $0.minimumInteritemSpacing = 4
-        }
     
     var images: [ImageEntity] = []
     var presentor: MainViewToPresenterProtocol?
@@ -37,6 +27,7 @@ class MainViewController: UIViewController {
         self.view.backgroundColor = .white
         
         setupSearchBar()
+        setupFlowLayout()
         setupImageCollectionView()
     }
 

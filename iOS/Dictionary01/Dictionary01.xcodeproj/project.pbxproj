@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,7 +12,7 @@
 		EE15B2F9259C3C2100D544D3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B2F8259C3C2100D544D3 /* SearchViewModel.swift */; };
 		EE15B2FE259C435B00D544D3 /* DictionaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B2FD259C435B00D544D3 /* DictionaryResponse.swift */; };
 		EE15B303259C445300D544D3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B302259C445300D544D3 /* Observable.swift */; };
-		EE15B308259C48BB00D544D3 /* ViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B307259C48BB00D544D3 /* ViewControllerExt.swift */; };
+		EE15B308259C48BB00D544D3 /* ViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE15B307259C48BB00D544D3 /* ViewController+Delegate.swift */; };
 		EE61411A259B9D920021CDE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614119259B9D920021CDE3 /* AppDelegate.swift */; };
 		EE61411C259B9D920021CDE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61411B259B9D920021CDE3 /* SceneDelegate.swift */; };
 		EE61411E259B9D920021CDE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61411D259B9D920021CDE3 /* ViewController.swift */; };
@@ -21,7 +21,8 @@
 		EE614126259B9D950021CDE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE614124259B9D950021CDE3 /* LaunchScreen.storyboard */; };
 		EE614131259B9D950021CDE3 /* Dictionary01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614130259B9D950021CDE3 /* Dictionary01Tests.swift */; };
 		EE61413C259B9D950021CDE3 /* Dictionary01UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61413B259B9D950021CDE3 /* Dictionary01UITests.swift */; };
-		EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */; };
+		EE614159259BA66D0021CDE3 /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE614158259BA66D0021CDE3 /* ViewController+UI.swift */; };
+		EEE464112612C9BA00AF4A67 /* SecretKeySet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE464102612C9BA00AF4A67 /* SecretKeySet.swift */; };
 		EEFEACC8259F4C4B00A6ADE2 /* MoreInfoTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFEACC7259F4C4B00A6ADE2 /* MoreInfoTableCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,10 +48,10 @@
 		5C34DDBA1DD0E97674575C9A /* Pods-Dictionary01.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary01.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dictionary01/Pods-Dictionary01.debug.xcconfig"; sourceTree = "<group>"; };
 		E2BCE90B9E016345E6FC12AE /* Pods_Dictionary01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictionary01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE15B2F0259C37AC00D544D3 /* SearchTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCell.swift; sourceTree = "<group>"; };
-		EE15B2F8259C3C2100D544D3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = Dictionary01/View/Cells/SearchViewModel.swift; sourceTree = SOURCE_ROOT; };
-		EE15B2FD259C435B00D544D3 /* DictionaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DictionaryResponse.swift; path = Dictionary01/View/Cells/DictionaryResponse.swift; sourceTree = SOURCE_ROOT; };
-		EE15B302259C445300D544D3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Dictionary01/View/Cells/Observable.swift; sourceTree = SOURCE_ROOT; };
-		EE15B307259C48BB00D544D3 /* ViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExt.swift; sourceTree = "<group>"; };
+		EE15B2F8259C3C2100D544D3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewModel.swift; path = Dictionary01/ViewModel/SearchViewModel.swift; sourceTree = SOURCE_ROOT; };
+		EE15B2FD259C435B00D544D3 /* DictionaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DictionaryResponse.swift; path = Dictionary01/Model/DictionaryResponse.swift; sourceTree = SOURCE_ROOT; };
+		EE15B302259C445300D544D3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Dictionary01/Model/Observable.swift; sourceTree = SOURCE_ROOT; };
+		EE15B307259C48BB00D544D3 /* ViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Delegate.swift"; sourceTree = "<group>"; };
 		EE614116259B9D920021CDE3 /* Dictionary01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE614119259B9D920021CDE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE61411B259B9D920021CDE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +66,8 @@
 		EE614137259B9D950021CDE3 /* Dictionary01UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Dictionary01UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE61413B259B9D950021CDE3 /* Dictionary01UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dictionary01UITests.swift; sourceTree = "<group>"; };
 		EE61413D259B9D950021CDE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerComponents.swift; sourceTree = "<group>"; };
+		EE614158259BA66D0021CDE3 /* ViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
+		EEE464102612C9BA00AF4A67 /* SecretKeySet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeySet.swift; sourceTree = "<group>"; };
 		EEFEACC7259F4C4B00A6ADE2 /* MoreInfoTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 		EE614118259B9D920021CDE3 /* Dictionary01 */ = {
 			isa = PBXGroup;
 			children = (
+				EEE464102612C9BA00AF4A67 /* SecretKeySet.swift */,
 				EE61416F259BA78B0021CDE3 /* Model */,
 				EE61416E259BA7820021CDE3 /* ViewModel */,
 				EE61414C259BA5930021CDE3 /* View */,
@@ -182,8 +185,8 @@
 			children = (
 				EE15B2EF259C379500D544D3 /* Cells */,
 				EE61411D259B9D920021CDE3 /* ViewController.swift */,
-				EE614158259BA66D0021CDE3 /* ViewControllerComponents.swift */,
-				EE15B307259C48BB00D544D3 /* ViewControllerExt.swift */,
+				EE614158259BA66D0021CDE3 /* ViewController+UI.swift */,
+				EE15B307259C48BB00D544D3 /* ViewController+Delegate.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -212,12 +215,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE614140259B9D950021CDE3 /* Build configuration list for PBXNativeTarget "Dictionary01" */;
 			buildPhases = (
+				D2FDF54C60BA29E8582F1109 /* [CP] Check Pods Manifest.lock */,
 				D9D1954DB6C358A4E93340E2 /* 📦 Check Pods Manifest.lock */,
 				EE614112259B9D920021CDE3 /* Sources */,
 				EE614113259B9D920021CDE3 /* Frameworks */,
 				EE614114259B9D920021CDE3 /* Resources */,
 				FBD3864643655232BD5D72D0 /* 📦 Embed Pods Frameworks */,
-				52BE566F368EE6D8A1524764 /* 📦 Copy Pods Resources */,
+				6CF19E5375B278BBB0E3EFC6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,7 +338,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		52BE566F368EE6D8A1524764 /* 📦 Copy Pods Resources */ = {
+		6CF19E5375B278BBB0E3EFC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dictionary01/Pods-Dictionary01-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dictionary01/Pods-Dictionary01-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dictionary01/Pods-Dictionary01-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2FDF54C60BA29E8582F1109 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -342,15 +363,18 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dictionary01-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dictionary01/Pods-Dictionary01-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D9D1954DB6C358A4E93340E2 /* 📦 Check Pods Manifest.lock */ = {
@@ -400,12 +424,13 @@
 			files = (
 				EE15B303259C445300D544D3 /* Observable.swift in Sources */,
 				EEFEACC8259F4C4B00A6ADE2 /* MoreInfoTableCell.swift in Sources */,
-				EE15B308259C48BB00D544D3 /* ViewControllerExt.swift in Sources */,
+				EE15B308259C48BB00D544D3 /* ViewController+Delegate.swift in Sources */,
 				EE15B2F9259C3C2100D544D3 /* SearchViewModel.swift in Sources */,
 				EE61411E259B9D920021CDE3 /* ViewController.swift in Sources */,
+				EEE464112612C9BA00AF4A67 /* SecretKeySet.swift in Sources */,
 				EE61411A259B9D920021CDE3 /* AppDelegate.swift in Sources */,
 				EE15B2F1259C37AC00D544D3 /* SearchTableCell.swift in Sources */,
-				EE614159259BA66D0021CDE3 /* ViewControllerComponents.swift in Sources */,
+				EE614159259BA66D0021CDE3 /* ViewController+UI.swift in Sources */,
 				EE61411C259B9D920021CDE3 /* SceneDelegate.swift in Sources */,
 				EE15B2FE259C435B00D544D3 /* DictionaryResponse.swift in Sources */,
 			);

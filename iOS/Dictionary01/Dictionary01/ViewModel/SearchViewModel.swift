@@ -22,15 +22,13 @@ class SearchViewModel {
     func requestSearch(word: String?) {
         if preQuery != word { self.nextStart = 1 }
         if self.nextStart > 991 { return }
-        guard let searchWord: String = word, !(word?.isEmpty ?? true) else {
-            return
-        }
+        guard let searchWord: String = word, !(word?.isEmpty ?? true) else { return }
         
         AF.request(
             baseUrl,
             method: .get,
             parameters: ["query":searchWord, "start":nextStart],
-            headers: ["X-Naver-Client-Id":"Z6OHzyRe_5anc4FWCoq2", "X-Naver-Client-Secret":"pSumWoEXFY"]
+            headers: ["X-Naver-Client-Id" : SecretKeySet.naverClientId, "X-Naver-Client-Secret" : SecretKeySet.naverClientSecret]
         ).responseJSON { response in
                 switch response.result {
                 case .success(let value):

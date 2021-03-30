@@ -55,8 +55,7 @@ class SignInViewModel {
         
         input.signInButton.withLatestFrom(Observable.combineLatest(input.email, input.password))
             .map { [weak self] (email, password) in
-                guard let self = self else { return false }
-                return self.loginModel.requestLogin(email, password) == 200
+                return (self?.loginModel.requestLogin(email, password) ?? 404) == 200
             }.bind(to: output.enableLogIn)
             .disposed(by: disposeBag)
     }
@@ -66,7 +65,6 @@ class SignInViewModel {
         
         let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegex)
-        
         return emailTest.evaluate(with: email)
     }
     

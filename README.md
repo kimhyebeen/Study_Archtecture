@@ -1,8 +1,24 @@
 # Study_Architecture
-iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아키텍쳐를 활용? 공부? 연습? 해보기 위한 레포지토리.
+iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 모바일 아키텍쳐 패턴을 공부하고 연습해보는 레포지토리입니다.
 
  
 
+* MVVM
+  + 재사용성과 테스트용이함을 위해 UI로직과 비즈니스로직을 분리할 수 있다.
+  + View와 Model 간의 의존성이 없다.
+  + View가 ViewModel을 관찰하고 ViewModel은 View에 대해 알지 못하기 때문에, View와 ViewModel 사이의 의존성도 거의 없어진다.
+  + 하나의 ViewModel을 여러 View에서 사용할 수 있도록 할 수 있다.
+* MVP
+  + View와 Model을 분리한다.
+  + View와 Presenter가 1:1 관계로 View와 Presenter 사이의 의존성이 깊어진다.
+* VIPER
+  + 재사용성과 테스트용이함을 위해 코드를 분리할 수 있다.
+  + 그 역할에 맞춰 앱 컴포넌트를 분리할 수 있으며, 이것을 seperation of concern이라 부른다.
+  + 새 기능을 추가하기 쉽다.
+  + UI 로직이 비지니스 로직으로부터 떨어져있기 때문에 자연스럽게 테스트를 만들기 쉬워진다.
+  + 다만, 한 화면을 구성하는 파일이 너무 많아져서 화면이 많아질수록 코드의 양도 방대해진다.
+
+## LIST
 * [🍎 iOS-VIPER 패턴 예제-SearchImage](#iOS-VIPER-SearchImage)
 * [🍎 iOS-MVVM 패턴 예제-SignIn](#iOS-MVVM-SignIn)
 * [🍎 iOS-MVVM 패턴 예제-Dictionary01](#iOS-MVVM-Dictionary01)
@@ -17,14 +33,10 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 ## iOS-VIPER-SearchImage
 * [네이버 이미지 검색 API](https://developers.naver.com/docs/search/image/) 활용
 * `Alamofire`와 `CoreData` 사용
-* VIPER의 이점
-  + 재사용성과 테스트용이함을 위해 코드를 분리할 수 있다.
-  + 그 역할에 맞춰 앱 컴포넌트를 분리할 수 있으며, 이것을 seperation of concern이라 부른다.
-  + 새 기능을 추가하기 쉽다.
-  + UI 로직이 비지니스 로직으로부터 떨어져있기 때문에 자연스럽게 테스트를 만들기 쉬워진다.
-* 참고 : [VIPER-Architecture for iOS project with simple demo example.](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)
-* 참고 : [Building iOS App With VIPER Architecture](https://afteracademy.com/blog/building-ios-app-with-viper-architecture-8109acc72227)
-* 참고: [Zeddios - Core Data](https://zeddios.tistory.com/987)
+* 참고 URL
+  + [VIPER-Architecture for iOS project with simple demo example.](https://medium.com/cr8resume/viper-architecture-for-ios-project-with-simple-demo-example-7a07321dbd29)
+  + [Building iOS App With VIPER Architecture](https://afteracademy.com/blog/building-ios-app-with-viper-architecture-8109acc72227)
+  + [Zeddios - Core Data](https://zeddios.tistory.com/987)
 
 <details>
 <summary>ScreenShot (클릭하면 펼쳐집니다)</summary>
@@ -42,7 +54,9 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 
 ## iOS-MVVM-SignIn
 * 간단한 로그인 화면 구현하기
-* `RxSwift` 사용 - PublishSubject, PublishRelay
+* 이메일과 비밀번호 양식이 올바른 상태에서만 버튼이 활성화되도록 구현
+* `네이버 로그인 API` 사용 - 로그인 후 token 가져오기
+* `Alamofire`, `RxSwift` 사용 - PublishSubject, PublishRelay
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
 <img src="./SignIn-screen.png" width= 1000 />
 
@@ -52,7 +66,8 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 아�
 ## iOS-MVVM-Dictionary01
 * 네이버 사전 API를 사용한 사전 검색 애플리케이션
 * `Alamofire` 사용
-* 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 사용하였다.
+* 안드로이드에서는 DataBinding을 그냥 설정만 해주면 데이터바인딩 사용이 가능 했는데, iOS의 경우 RxSwift/Combine을 사용하지 않는다면 Observable 객체를 직접 만들어 사용하거나 NotificationCenter을 사용해야 함을 알게되었다. 그래서 이번 예제에서는 직접 정의된 Observable 객체를 만들어 사용해보았다.
+* 블로그: [Data Binding in MVVM on iOS](https://beenii.tistory.com/124?category=787971) 
 <details>
 <summary>Observable<T> 객체 (클릭하면 펼쳐집니다)</summary>
 <div markdown="1">
@@ -90,19 +105,19 @@ final class Observable<T> {
 <br />
 
 ## AOS-MVVM-Contacts01
+* 간단하게 이름, 전화번호를 추가하거나 목록을 보여주는 애플리케이션
 * `LiveData`, `CoRoutine` 사용
-* 연락처목록 만들기 애플리케이션
 <img src="./Contacts01-diagram.png" width=500 />
 
 <br />
 <br />
 
 ## AOS-MVVM-Contracts03
+* 간단하게 이름, 전화번호를 추가하거나 목록을 보여주는 애플리케이션
+* RecyclerView에 데이터바인딩을 적용하기 위해 **Contacts01**에서 ViewHolder와 Adapter 변경
 * `DataBinding`, `LiveData`, `RxKotlin` 사용
-* 블로그 정리 : [RecyclerView에 DataBinding 적용하기](https://beenii.tistory.com/103)
-* 연락처 목록 만들기 애플리케이션
-* RecyclerView에 데이터바인딩을 적용하기 위해 ViewHolder와 Adapter 변경
-* 아직은 미숙해서 좀 더 고쳐야 할 것 같지만 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
+* 블로그: [RecyclerView에 DataBinding 적용하기](https://beenii.tistory.com/103)
+* 아직은 미숙해서 좀 더 고쳐야 할 것 같지만.. 그래도 Adapter와 ViewHolder에 데이터바인딩 적용 성공
 
 <br />
 <br />

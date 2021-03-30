@@ -8,8 +8,10 @@
 import UIKit
 
 extension MainViewController {
-    // Mark: Search Bar
+    // MARK: SearchBar
     func setupSearchBar() {
+        searchBar.placeholder = "이미지를 검색해주세요."
+        searchBar.setShowsCancelButton(true, animated: true)
         searchBar.delegate = self
         self.view.addSubview(searchBar)
         
@@ -19,7 +21,15 @@ extension MainViewController {
         searchBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
     }
     
-    // Mark: Image Collection View
+    // MARK: FlowLayout
+    func setupFlowLayout() {
+        flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width-8) / 3, height: (UIScreen.main.bounds.width-8) / 3)
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 4
+        flowLayout.minimumInteritemSpacing = 4
+    }
+    
+    // MARK: ImageCollectionView
     func setupImageCollectionView() {
         setupImageCollectionViewSetting()
         self.view.addSubview(imageCollectionView)

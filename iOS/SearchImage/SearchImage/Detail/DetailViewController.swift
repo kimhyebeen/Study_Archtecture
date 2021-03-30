@@ -29,24 +29,23 @@ class DetailViewController: UIViewController, DetailViewProtocol, UIScrollViewDe
     
     func loadImage() {
         guard let link = imageLink else { return }
+        guard let url: URL = URL(string: link) else {
+            self.loadEmptyImage()
+            return
+        }
+        guard let imageData: Data = try? Data(contentsOf: url) else {
+            self.loadEmptyImage()
+            return
+        }
         
-        DispatchQueue.global().async {
-            guard let url: URL = URL(string: link) else {
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "emptyImage")
-                }
-                return
-            }
-            guard let imageData: Data = try? Data(contentsOf: url) else {
-                DispatchQueue.main.async {
-                    self.imageView.image = UIImage(named: "emptyImage")
-                }
-                return
-            }
-            
-            DispatchQueue.main.async {
-                self.imageView.image = UIImage(data: imageData)
-            }
+        DispatchQueue.main.async { [weak self] in
+            self?.imageView.image = UIImage(data: imageData)
+        }
+    }
+    
+    private func loadEmptyImage() {
+        DispatchQueue.main.async { [weak self] in
+            self?.imageView.image = UIImage(named: "emptyImage")
         }
     }
     

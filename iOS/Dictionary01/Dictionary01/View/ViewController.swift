@@ -14,9 +14,10 @@ class ViewController: UIViewController {
     var tableView: UITableView = UITableView()
     
     var searchVM = SearchViewModel()
-    var items: [DictionaryModel] {
-        get {
-            return searchVM.dictionaryItems.value
+    var items: [DictionaryModel] = []
+    var totalCount: Int = 0 {
+        willSet {
+            searchTotalCount.text = "\(newValue)개 검색됨."
         }
     }
 
@@ -24,27 +25,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupView()
-        
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
-        self.tableView.register(SearchTableCell.self, forCellReuseIdentifier: SearchTableCell.identifier)
-        self.tableView.register(MoreInfoTableCell.self, forCellReuseIdentifier: MoreInfoTableCell.identifier)
-        
-        searchVM.dictionaryItems.bind { [weak self] model in
-            self?.tableView.reloadData()
-            self?.searchTotalCount.text = "\(model.count)개 검색됨."
-        }
+        binding()
     }
 
     private func setupView() {
-        self.view.addSubview(searchTextField)
-        self.view.addSubview(searchTotalCount)
-        self.view.addSubview(searchButton)
-        self.view.addSubview(tableView)
-        
+        setupSearchButton()
         setupSearchTextField()
         setupSearchTotalCountLabel()
-        setupSearchButton()
         setupTableView()
+    }
+    
+    private func binding() {
+        searchVM.dictionaryItems.bind { [weak self] model in
+            self?.items = model
+            self?.tableView.reloadData()
+            self?.totalCount = model.count
+        }
+    }
+    
+    @objc func clickSearchButton(_ sender: UIButton) {
+        self.searchVM.requestSearch(word: self.searchTextField.text)
     }
 }

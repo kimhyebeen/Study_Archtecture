@@ -3,27 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5EECDDA26CC71FAD9243FAF4 /* Pods_SignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E886FC3C18CB612E9CDEACC9 /* Pods_SignIn.framework */; };
 		EE1F279C25B136DE00DA2CE9 /* SignInForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F279B25B136DE00DA2CE9 /* SignInForm.swift */; };
-		EE1F27A725B148C000DA2CE9 /* SignInVC+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27A625B148C000DA2CE9 /* SignInVC+UI.swift */; };
+		EE1F27A725B148C000DA2CE9 /* SignInViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27A625B148C000DA2CE9 /* SignInViewController+UI.swift */; };
 		EE1F27B825B186E700DA2CE9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */; };
-		EE1F27C725B1911600DA2CE9 /* SignInVC+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27C625B1911600DA2CE9 /* SignInVC+Delegate.swift */; };
-		EE3D541C25B345C00064C274 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D541B25B345C00064C274 /* MainVC.swift */; };
-		EE3D542925B346150064C274 /* MainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D542825B346150064C274 /* MainCardView.swift */; };
-		EE3D542E25B3DCD50064C274 /* MainBalanceCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D542D25B3DCD50064C274 /* MainBalanceCardView.swift */; };
-		EE3D543425B3DD570064C274 /* BalanceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D543325B3DD570064C274 /* BalanceTableCell.swift */; };
+		EE1F27C725B1911600DA2CE9 /* SignInViewController+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1F27C625B1911600DA2CE9 /* SignInViewController+Delegate.swift */; };
+		EE3D541C25B345C00064C274 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3D541B25B345C00064C274 /* MainViewController.swift */; };
 		EE55A2FD25B0966500F7009C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A2FC25B0966500F7009C /* AppDelegate.swift */; };
 		EE55A2FF25B0966500F7009C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A2FE25B0966500F7009C /* SceneDelegate.swift */; };
-		EE55A30125B0966500F7009C /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A30025B0966500F7009C /* SignInVC.swift */; };
+		EE55A30125B0966500F7009C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A30025B0966500F7009C /* SignInViewController.swift */; };
 		EE55A30425B0966500F7009C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE55A30225B0966500F7009C /* Main.storyboard */; };
 		EE55A30625B0966700F7009C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE55A30525B0966700F7009C /* Assets.xcassets */; };
 		EE55A30925B0966700F7009C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE55A30725B0966700F7009C /* LaunchScreen.storyboard */; };
 		EE55A31425B0966700F7009C /* SignInTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A31325B0966700F7009C /* SignInTests.swift */; };
 		EE55A31F25B0966700F7009C /* SignInUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE55A31E25B0966700F7009C /* SignInUITests.swift */; };
+		EEE4641F2612DDB300AF4A67 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4641E2612DDB300AF4A67 /* UIView+.swift */; };
+		EEE464272612DDFF00AF4A67 /* MainViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE464262612DDFF00AF4A67 /* MainViewController+UI.swift */; };
 		EEEF88CB25C8ED1900CFC0E5 /* SignInRoundedRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEF88CA25C8ED1900CFC0E5 /* SignInRoundedRectangle.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,17 +48,14 @@
 		78096242F1D2736D4C80A800 /* Pods-SignIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SignIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SignIn/Pods-SignIn.debug.xcconfig"; sourceTree = "<group>"; };
 		E886FC3C18CB612E9CDEACC9 /* Pods_SignIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SignIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1F279B25B136DE00DA2CE9 /* SignInForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInForm.swift; path = SignIn/View/SignInForm.swift; sourceTree = SOURCE_ROOT; };
-		EE1F27A625B148C000DA2CE9 /* SignInVC+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInVC+UI.swift"; sourceTree = "<group>"; };
+		EE1F27A625B148C000DA2CE9 /* SignInViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+UI.swift"; sourceTree = "<group>"; };
 		EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
-		EE1F27C625B1911600DA2CE9 /* SignInVC+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInVC+Delegate.swift"; sourceTree = "<group>"; };
-		EE3D541B25B345C00064C274 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		EE3D542825B346150064C274 /* MainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainCardView.swift; path = SignIn/View/MainCardView.swift; sourceTree = SOURCE_ROOT; };
-		EE3D542D25B3DCD50064C274 /* MainBalanceCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainBalanceCardView.swift; path = SignIn/View/MainBalanceCardView.swift; sourceTree = SOURCE_ROOT; };
-		EE3D543325B3DD570064C274 /* BalanceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceTableCell.swift; sourceTree = "<group>"; };
+		EE1F27C625B1911600DA2CE9 /* SignInViewController+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignInViewController+Delegate.swift"; sourceTree = "<group>"; };
+		EE3D541B25B345C00064C274 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		EE55A2F925B0966500F7009C /* SignIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE55A2FC25B0966500F7009C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE55A2FE25B0966500F7009C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE55A30025B0966500F7009C /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		EE55A30025B0966500F7009C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EE55A30325B0966500F7009C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE55A30525B0966700F7009C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE55A30825B0966700F7009C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +66,8 @@
 		EE55A31A25B0966700F7009C /* SignInUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignInUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE55A31E25B0966700F7009C /* SignInUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUITests.swift; sourceTree = "<group>"; };
 		EE55A32025B0966700F7009C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEE4641E2612DDB300AF4A67 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		EEE464262612DDFF00AF4A67 /* MainViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+UI.swift"; sourceTree = "<group>"; };
 		EEEF88CA25C8ED1900CFC0E5 /* SignInRoundedRectangle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInRoundedRectangle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,9 +109,9 @@
 		EE3D541925B345920064C274 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				EE55A30025B0966500F7009C /* SignInVC.swift */,
-				EE1F27A625B148C000DA2CE9 /* SignInVC+UI.swift */,
-				EE1F27C625B1911600DA2CE9 /* SignInVC+Delegate.swift */,
+				EE55A30025B0966500F7009C /* SignInViewController.swift */,
+				EE1F27A625B148C000DA2CE9 /* SignInViewController+UI.swift */,
+				EE1F27C625B1911600DA2CE9 /* SignInViewController+Delegate.swift */,
 				EE1F27B725B186E700DA2CE9 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
@@ -122,18 +120,10 @@
 		EE3D541A25B345AB0064C274 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				EE3D543225B3DD200064C274 /* View */,
-				EE3D541B25B345C00064C274 /* MainVC.swift */,
+				EE3D541B25B345C00064C274 /* MainViewController.swift */,
+				EEE464262612DDFF00AF4A67 /* MainViewController+UI.swift */,
 			);
 			path = Main;
-			sourceTree = "<group>";
-		};
-		EE3D543225B3DD200064C274 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EE3D543325B3DD570064C274 /* BalanceTableCell.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		EE55A2F025B0966500F7009C = {
@@ -197,8 +187,7 @@
 			children = (
 				EE1F279B25B136DE00DA2CE9 /* SignInForm.swift */,
 				EEEF88CA25C8ED1900CFC0E5 /* SignInRoundedRectangle.swift */,
-				EE3D542825B346150064C274 /* MainCardView.swift */,
-				EE3D542D25B3DCD50064C274 /* MainBalanceCardView.swift */,
+				EEE4641E2612DDB300AF4A67 /* UIView+.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,12 +207,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE55A32325B0966700F7009C /* Build configuration list for PBXNativeTarget "SignIn" */;
 			buildPhases = (
+				889F830D9F81C6D5F5EFA16B /* [CP] Check Pods Manifest.lock */,
 				6654BE4B73E8403A01A11ADD /* 📦 Check Pods Manifest.lock */,
 				EE55A2F525B0966500F7009C /* Sources */,
 				EE55A2F625B0966500F7009C /* Frameworks */,
 				EE55A2F725B0966500F7009C /* Resources */,
 				F7F8471EFDB03B32025222EB /* 📦 Embed Pods Frameworks */,
-				102B9075A465D83628567FD9 /* 📦 Copy Pods Resources */,
+				B57BF5E6BECA7FD9A180E2EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -340,25 +330,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		102B9075A465D83628567FD9 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SignIn/Pods-SignIn-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6654BE4B73E8403A01A11ADD /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -376,6 +347,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		889F830D9F81C6D5F5EFA16B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SignIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B57BF5E6BECA7FD9A180E2EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignIn/Pods-SignIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SignIn/Pods-SignIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SignIn/Pods-SignIn-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7F8471EFDB03B32025222EB /* 📦 Embed Pods Frameworks */ = {
@@ -404,18 +414,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE55A30125B0966500F7009C /* SignInVC.swift in Sources */,
+				EEE4641F2612DDB300AF4A67 /* UIView+.swift in Sources */,
+				EE55A30125B0966500F7009C /* SignInViewController.swift in Sources */,
 				EEEF88CB25C8ED1900CFC0E5 /* SignInRoundedRectangle.swift in Sources */,
 				EE1F27B825B186E700DA2CE9 /* SignInViewModel.swift in Sources */,
-				EE3D543425B3DD570064C274 /* BalanceTableCell.swift in Sources */,
-				EE1F27A725B148C000DA2CE9 /* SignInVC+UI.swift in Sources */,
-				EE3D542E25B3DCD50064C274 /* MainBalanceCardView.swift in Sources */,
-				EE3D541C25B345C00064C274 /* MainVC.swift in Sources */,
+				EE1F27A725B148C000DA2CE9 /* SignInViewController+UI.swift in Sources */,
+				EE3D541C25B345C00064C274 /* MainViewController.swift in Sources */,
+				EEE464272612DDFF00AF4A67 /* MainViewController+UI.swift in Sources */,
 				EE55A2FD25B0966500F7009C /* AppDelegate.swift in Sources */,
-				EE1F27C725B1911600DA2CE9 /* SignInVC+Delegate.swift in Sources */,
+				EE1F27C725B1911600DA2CE9 /* SignInViewController+Delegate.swift in Sources */,
 				EE55A2FF25B0966500F7009C /* SceneDelegate.swift in Sources */,
 				EE1F279C25B136DE00DA2CE9 /* SignInForm.swift in Sources */,
-				EE3D542925B346150064C274 /* MainCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
