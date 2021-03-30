@@ -1,5 +1,5 @@
-# Study_Architecture
-iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 모바일 아키텍쳐 패턴을 공부하고 연습해보는 레포지토리입니다.
+# Study Architecture
+처음에는 Android로 다양한 아키텍쳐를 공부하다가, iOS 개발을 공부하기 시작하면서 iOS로 아키텍쳐 패턴을 연습 및 적용해보기 시작했습니다. iOS의 다양한 기술을 활용해보면서 MVVM, MVP, VIPER 등의 모바일 아키텍쳐 패턴을 공부하고 연습해보는 레포지토리입니다.
 
  
 
@@ -17,6 +17,8 @@ iOS, Android의 다양한 기술을 활용하면서 MVVM, MVP, VIPER 등의 모�
   + 새 기능을 추가하기 쉽다.
   + UI 로직이 비지니스 로직으로부터 떨어져있기 때문에 자연스럽게 테스트를 만들기 쉬워진다.
   + 다만, 한 화면을 구성하는 파일이 너무 많아져서 화면이 많아질수록 코드의 양도 방대해진다.
+
+<br />
 
 ## LIST
 * [🍎 iOS-VIPER 패턴 예제-SearchImage](#iOS-VIPER-SearchImage)
