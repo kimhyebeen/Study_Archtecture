@@ -20,9 +20,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MainVC - access token : \(String(describing: loginInstance?.accessToken))")
         
         setupView()
+        mainLabel.text = "\(email)님\n로그인 성공"
+        getAPIInformation()
     }
     
     func setupView() {
@@ -42,22 +43,20 @@ class MainViewController: UIViewController {
     }
     
     func getAPIInformation() {
-        guard let isValidAccessToken = loginInstance?.isValidAccessTokenExpireTimeNow(), !isValidAccessToken else { return }
         guard let tokenType = loginInstance?.tokenType, let accessToken = loginInstance?.accessToken else { return }
-
+        
         let urlStr = "https://openapi.naver.com/v1/nid/me"
         let url = URL(string: urlStr)!
         let authorization = "\(tokenType) \(accessToken)"
-
         let requestLogin = AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: ["Authorization": authorization])
         requestLogin.responseJSON { [weak self] response in
             guard let result = response.value as? [String: Any] else { return }
             guard let object = result["response"] as? [String: Any] else { return }
-            guard let name = object["name"] as? String else { return }
-            guard let _ = object["email"] as? String else { return }
+            guard let _ = object["name"] as? String else { return }
+            guard let email = object["email"] as? String else { return }
             guard let _ = object["id"] as? String else {return}
             
-            self?.mainLabel.text = "\(name)님이 로그인했습니다."
+            self?.mainLabel.text = "\(email)님\n로그인 성공"
         }
     }
 

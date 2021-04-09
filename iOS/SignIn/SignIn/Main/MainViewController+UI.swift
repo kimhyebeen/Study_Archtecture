@@ -29,14 +29,16 @@ extension MainViewController {
         self.view.addSubview(goodMorningLabel)
         
         goodMorningLabel.translatesAutoresizingMaskIntoConstraints = false
-        goodMorningLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 60).isActive = true
+        goodMorningLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 120).isActive = true
         goodMorningLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
     }
     
     // MARK: MainLabel
     func setupMainLabel() {
         mainLabel.text = "Going to Los Angeles?"
+        mainLabel.numberOfLines = 0
         mainLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        mainLabel.textAlignment = .center
         mainLabel.textColor = UIColor(named: "DarkMountainColor")
         self.view.addSubview(mainLabel)
         
