@@ -60,7 +60,7 @@
 * `네이버 로그인 API` 사용 - 로그인 후 token 가져오기
 * `Alamofire`, `RxSwift` 사용 - PublishSubject, PublishRelay
 * 참고 : [Animating With The iOS Keyboard In Swift](https://www.robertpieta.com/animate-with-ios-keyboard-swift/)
-<img src="./SignIn-screen.png" width= 1000 />
+<img src="./SignIn-screen1.png" width= 1000 />
 
 <br />
 <br />
